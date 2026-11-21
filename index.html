@@ -163,7 +163,8 @@
         padding: 8mm 10mm !important; /* Clean internal margin */
       }
 
-      .avoid-break {
+      .avoid-break,
+      #resumePrintView .cv-box {
         break-inside: avoid !important;
         page-break-inside: avoid !important;
       }
@@ -1268,7 +1269,7 @@
     </div>
 
     <!-- Work Experience & Projects -->
-    <div class="mb-3 avoid-break">
+    <div class="mb-3">
       <h2 class="text-[11px] font-mono uppercase font-bold tracking-wider cv-accent mb-1 flex items-center gap-1.5">
         <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
         <span data-i18n="sec_exp_title">سوابق کاری و پروژه‌های عملی</span>
@@ -1278,7 +1279,10 @@
         <!-- 1. Venorad -->
         <div class="cv-box rounded border p-2 space-y-1">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-bold cv-title" data-i18n="job_venorad_title">طراحی، توسعه و اتومیشن فروشگاه اینترنتی ونوراد</span>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold cv-title" data-i18n="job_venorad_title">طراحی، توسعه و اتومیشن فروشگاه اینترنتی ونوراد</span>
+              <span class="font-mono text-[9px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">venorad.ir</span>
+            </div>
             <span class="font-mono text-[10px] cv-muted" data-i18n="job_venorad_date">مرداد ۱۴۰۵ - اکنون (در حال توسعه)</span>
           </div>
           <div class="text-[10px] leading-relaxed cv-text text-justify" data-i18n="job_venorad_desc">
@@ -1293,7 +1297,10 @@
         <!-- 2. Godot Game -->
         <div class="cv-box rounded border p-2 space-y-1">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-bold cv-title" data-i18n="job_godot_title">توسعه بازی استراتژی نوبتی ۴X با موتور Godot 4</span>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold cv-title" data-i18n="job_godot_title">توسعه بازی استراتژی نوبتی ۴X با موتور Godot 4</span>
+              <span class="font-mono text-[9px] cv-muted">GDScript • Procedural Generation</span>
+            </div>
             <span class="font-mono text-[10px] cv-muted" data-i18n="job_godot_date">تیر ۱۴۰۵ - اکنون (در حال توسعه)</span>
           </div>
           <div class="text-[10px] leading-relaxed cv-text text-justify" data-i18n="job_godot_desc">
@@ -1304,10 +1311,13 @@
           </div>
         </div>
 
-        <!-- 3. Bots & Scraping -->
+        <!-- 3. Bots & WebIDM -->
         <div class="cv-box rounded border p-2 space-y-1">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-bold cv-title" data-i18n="job_bots_title">طراحی ربات‌های تلگرام و اتومیشن اسکرپینگ</span>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold cv-title" data-i18n="job_bots_title">طراحی ربات‌های تلگرام و اتومیشن اسکرپینگ</span>
+              <span class="font-mono text-[9px] cv-muted">Python • Asyncio • WebIDM</span>
+            </div>
             <span class="font-mono text-[10px] cv-muted" data-i18n="job_bots_date">دی ۱۴۰۳ - اکنون (فریلنس و پروژه‌ای)</span>
           </div>
           <div class="text-[10px] leading-relaxed cv-text text-justify" data-i18n="job_bots_desc">
@@ -1321,7 +1331,10 @@
         <!-- 4. Alpha Funded Trader -->
         <div class="cv-box rounded border p-2 space-y-1">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-bold cv-title" data-i18n="job_alpha_title">بازطراحی و بهینه‌سازی وبسایت پراپ فرم</span>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold cv-title" data-i18n="job_alpha_title">بازطراحی و بهینه‌سازی وبسایت پراپ فرم</span>
+              <span class="font-mono text-[9px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">alphafundedtrader.com</span>
+            </div>
             <span class="font-mono text-[10px] cv-muted" data-i18n="job_alpha_date">مرداد ۱۴۰۲ تا آذر ۱۴۰۲</span>
           </div>
           <div class="text-[10px] leading-relaxed cv-text text-justify" data-i18n="job_alpha_desc">
@@ -1332,16 +1345,53 @@
           </div>
         </div>
 
-        <!-- 5. RG1 & RexMovie -->
+        <!-- 5. RG1 Store -->
         <div class="cv-box rounded border p-2 space-y-1">
           <div class="flex items-center justify-between text-xs">
-            <span class="font-bold cv-title">توسعه پلتفرم فروش لایسنس RG1.ir و پرتال دانلودی RexMovie.ir</span>
-            <span class="font-mono text-[10px] cv-muted">۱۳۹۸ تا ۱۳۹۹</span>
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold cv-title" data-i18n="job_rg1_title">طراحی و مدیریت وبسایت فروشگاهی بازی‌های رایانه‌ای</span>
+              <span class="font-mono text-[9px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">rg1.ir</span>
+            </div>
+            <span class="font-mono text-[10px] cv-muted" data-i18n="job_rg1_date">مهر ۱۳۹۹ تا بهمن ۱۳۹۹</span>
           </div>
-          <div class="text-[10px] leading-relaxed cv-text text-justify">
+          <div class="text-[10px] leading-relaxed cv-text text-justify" data-i18n="job_rg1_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-0.5">
-              <li>راه‌اندازی فروشگاه ووکامرس قطعات و لایسنس بازی‌های اورجینال، اتصال درگاه بانکی و اتومیشن سفارشات دیجیتال.</li>
-              <li>طراحی پرتال رسانه‌ای و دانلود فیلم، پیکربندی سرورهای ذخیره‌سازی داده و هدایت تیم تولید محتوا.</li>
+              <li>راه‌اندازی کامل فروشگاه اینترنتی ووکامرس برای عرضه سخت‌افزار کامپیوتر و لایسنس بازی‌های اورجینال (استیم و یوپلی).</li>
+              <li>پیکربندی درگاه‌های پرداخت شتاب، سئو تکنیکال مقدماتی و مدیریت فرآیند تحویل سفارشات دیجیتال.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 6. TPrime / PSNPlus -->
+        <div class="cv-box rounded border p-2 space-y-1">
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold cv-title" data-i18n="job_tprime_title">طراحی وبسایت فروشگاهی اکانت توییچ پرایم و اشتراک‌ها</span>
+              <span class="font-mono text-[9px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">tprime / psnplus.ir</span>
+            </div>
+            <span class="font-mono text-[10px] cv-muted" data-i18n="job_tprime_date">اردیبهشت ۱۳۹۹ تا مرداد ۱۳۹۹</span>
+          </div>
+          <div class="text-[10px] leading-relaxed cv-text text-justify" data-i18n="job_tprime_desc">
+            <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-0.5">
+              <li>طراحی لندینگ تک‌صفحه‌ای اختصاصی با وردپرس جهت ارائه سریع اشتراک‌های دیجیتال و خدمات بازی‌های آنلاین.</li>
+              <li>بهینه‌سازی فرم‌ها و فرآیند ثبت و پیگیری آنی سفارشات مشتریان.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. RexMovie -->
+        <div class="cv-box rounded border p-2 space-y-1">
+          <div class="flex items-center justify-between text-xs">
+            <div class="flex items-center gap-1.5 flex-wrap">
+              <span class="font-bold cv-title" data-i18n="job_rex_title">طراحی و مدیریت وبسایت دانلود فیلم و سریال</span>
+              <span class="font-mono text-[9px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">rexmovie.ir</span>
+            </div>
+            <span class="font-mono text-[10px] cv-muted" data-i18n="job_rex_date">شهریور ۱۳۹۸ تا بهمن ۱۳۹۸</span>
+          </div>
+          <div class="text-[10px] leading-relaxed cv-text text-justify" data-i18n="job_rex_desc">
+            <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-0.5">
+              <li>توسعه پرتال رسانه‌ای دانلود فیلم و سریال از پایه و پیکربندی سرورهای ذخیره‌سازی داده.</li>
+              <li>مدیریت تیم تولید محتوا و بهینه‌سازی فنی ساختار لینک‌ها و پایگاه داده وردپرس.</li>
             </ul>
           </div>
         </div>
