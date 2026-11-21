@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="dark scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shahab Hosseini Bay | Software Engineer & Systems Architect</title>
+  <meta name="description" content="Portfolio of Seyed Shahabeddin Hosseini Bay: Software Engineer specializing in Python, System Infrastructure, Applied AI Pipelines, Custom WooCommerce Plugins, and Game Development.">
+  <meta name="keywords" content="Shahab Hosseini Bay, Software Engineer, Python, Homelab, VMware ESXi, WordPress Plugin Developer, PCCC, Godot, BioIntelligence 2026">
+  <meta name="author" content="Seyed Shahabeddin Hosseini Bay">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://shahab-hb.ir/">
+  <meta property="og:title" content="Shahab Hosseini Bay | Software Engineer & Systems Architect">
+  <meta property="og:description" content="Portfolio of Seyed Shahabeddin Hosseini Bay: High-Performance Systems, Applied AI, Production WordPress Plugins & Engineering Projects.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/71304038?v=4">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polygon points='12 2 2 7 12 12 22 7 12 2'/><polyline points='2 17 12 22 22 17'/><polyline points='2 12 12 17 22 12'/></svg>">
+
+  <!-- Google Fonts: Inter & Vazirmatn & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS via CDN with custom configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'Vazirmatn', 'sans-serif'],
+            fa: ['Vazirmatn', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+            },
+            cyber: {
+              emerald: '#10b981',
+              cyan: '#06b6d4',
+              violet: '#8b5cf6',
+              amber: '#f59e0b',
+            },
+            dark: {
+              bg: '#0a0d14',
+              card: '#111726',
+              border: '#1e293b',
+              muted: '#94a3b8',
+            }
+          },
+          animation: {
+            'gradient-x': 'gradient-x 8s ease infinite',
+            'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+          },
+          keyframes: {
+            'gradient-x': {
+              '0%, 100%': { 'background-size': '200% 200%', 'background-position': 'left center' },
+              '50%': { 'background-size': '200% 200%', 'background-position': 'right center' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0a0d14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #1e293b;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #3b82f6;
+    }
+
+    /* Glassmorphism Classes */
+    .glass-panel {
+      background: rgba(17, 23, 38, 0.75);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-panel-light {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+    }
+    .dark .glass-card {
+      background: rgba(17, 24, 39, 0.7);
+      border: 1px solid rgba(59, 130, 246, 0.12);
+    }
+    .light .glass-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+
+    /* RTL typography tweaks */
+    html[dir="rtl"] {
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    html[dir="rtl"] .code-font {
+      font-family: 'JetBrains Mono', monospace;
+      direction: ltr;
+    }
+
+    /* Glow Effects */
+    .glow-blue {
+      box-shadow: 0 0 35px -5px rgba(59, 130, 246, 0.3);
+    }
+    .glow-emerald {
+      box-shadow: 0 0 35px -5px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Print Style for ATS/PDF export */
+    @media print {
+      body {
+        background: white !important;
+        color: black !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+      .glass-panel, .glass-card {
+        background: white !important;
+        border: 1px solid #ccc !important;
+        box-shadow: none !important;
+      }
+      a {
+        text-decoration: underline;
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-800 dark:bg-[#0a0d14] dark:text-slate-100 transition-colors duration-300 min-h-screen relative selection:bg-brand-500 selection:text-white">
+
+  <!-- Ambient Background Gradients -->
+  <div class="fixed inset-0 overflow-hidden pointer-events-none -z-10">
+    <div class="absolute -top-40 -left-40 w-96 h-96 bg-brand-500/10 dark:bg-brand-500/15 rounded-full blur-[128px]"></div>
+    <div class="absolute top-1/3 -right-40 w-96 h-96 bg-cyber-emerald/10 dark:bg-cyber-emerald/15 rounded-full blur-[140px]"></div>
+    <div class="absolute -bottom-40 left-1/3 w-[30rem] h-[30rem] bg-cyber-violet/10 dark:bg-cyber-violet/10 rounded-full blur-[160px]"></div>
+  </div>
+
+  <!-- Top Sticky Navigation -->
+  <header class="sticky top-0 z-50 glass-panel border-b border-slate-200/50 dark:border-dark-border/60 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo / Identity -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-600 to-cyber-cyan p-0.5 flex items-center justify-center shadow-lg shadow-brand-500/20 group-hover:scale-105 transition-transform">
+          <span class="text-white font-mono font-bold text-sm">SH</span>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-bold text-sm tracking-tight text-slate-900 dark:text-white group-hover:text-brand-500 transition-colors" data-i18n="nav_name">Shahab Hosseini Bay</span>
+          <span class="text-[11px] font-mono text-slate-500 dark:text-slate-400" data-i18n="nav_role">Software & Systems Engineer</span>
+        </div>
+      </a>
+
+      <!-- Navigation Links (Desktop) -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600 dark:text-slate-300">
+        <a href="#about" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_about">About</a>
+        <a href="#projects" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_projects">Projects</a>
+        <a href="#experience" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_experience">Experience</a>
+        <a href="#skills" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_skills">Skills & Infra</a>
+        <a href="#contact" class="hover:text-brand-500 dark:hover:text-brand-400 transition-colors" data-i18n="nav_contact">Contact</a>
+      </nav>
+
+      <!-- Action Utilities: Lang Switcher, Dark Mode, CV button -->
+      <div class="flex items-center gap-2 sm:gap-3">
+        <!-- Language Switcher Button -->
+        <button id="langToggleBtn" onclick="toggleLanguage()" class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-300 dark:border-dark-border text-xs font-semibold bg-white/70 dark:bg-dark-card hover:border-brand-500 dark:hover:border-brand-500 transition-all text-slate-700 dark:text-slate-200 shadow-sm" title="Switch Language / تغییر زبان">
+          <svg class="w-4 h-4 text-brand-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+          <span id="langLabel">FA</span>
+        </button>
+
+        <!-- Dark/Light Mode Switcher -->
+        <button id="themeToggleBtn" onclick="toggleTheme()" class="p-2 rounded-lg border border-slate-300 dark:border-dark-border bg-white/70 dark:bg-dark-card text-slate-600 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors shadow-sm" title="Toggle Theme">
+          <svg id="themeIconSun" class="w-4 h-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <svg id="themeIconMoon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+        </button>
+
+        <!-- Print/Download CV Button -->
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold shadow-md shadow-brand-500/20 transition-all hover:shadow-brand-500/40">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          <span data-i18n="btn_cv">Export CV</span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="relative pt-12 pb-20 md:pt-20 md:pb-32 overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Headline & Value Prop -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          
+          <!-- Availability Badge -->
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full w-max text-xs font-medium border border-cyber-emerald/30 bg-cyber-emerald/10 text-emerald-600 dark:text-cyber-emerald">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span data-i18n="hero_status">Open to Engineering Roles, Backend & Systems Projects</span>
+          </div>
+
+          <!-- Main Title -->
+          <div class="space-y-2">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.2]">
+              <span data-i18n="hero_greeting">Hi, I'm</span> <span class="bg-clip-text text-transparent bg-gradient-to-r from-brand-500 via-cyber-cyan to-cyber-violet">Shahab Hosseini Bay</span>
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-slate-700 dark:text-slate-300" data-i18n="hero_subtitle">
+              Software Engineer • Applied AI & Systems Architect • Full-Stack Developer
+            </p>
+          </div>
+
+          <!-- Bio Pitch -->
+          <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl" data-i18n="hero_desc">
+            Computer Engineering student at Golestan University (Entrance 2022) with practical, production-tested experience. From building physical enterprise rack homelabs (HP Gen8, ESXi, Tailscale) and custom high-traffic WooCommerce plugins (Venorad) to developing clinical AI datasets presented at the <strong>First Conference on BioIntelligence 2026 (Shahid Beheshti University)</strong> and 4X strategy game engines in Godot.
+          </p>
+
+          <!-- Quick Metrics / Key Strengths -->
+          <div class="grid grid-cols-3 gap-3 py-2 max-w-lg">
+            <div class="p-3 rounded-xl border border-slate-200 dark:border-dark-border bg-white/50 dark:bg-dark-card/60">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-brand-500">2500+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="metric_products">Catalog Ingestion (Venorad)</div>
+            </div>
+            <div class="p-3 rounded-xl border border-slate-200 dark:border-dark-border bg-white/50 dark:bg-dark-card/60">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-cyber-emerald">4+</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="metric_plugins">Custom WP Plugins</div>
+            </div>
+            <div class="p-3 rounded-xl border border-slate-200 dark:border-dark-border bg-white/50 dark:bg-dark-card/60">
+              <div class="text-xl sm:text-2xl font-bold font-mono text-cyber-violet">Oral 2026</div>
+              <div class="text-xs text-slate-500 dark:text-slate-400" data-i18n="metric_conf">BioIntelligence Presentation</div>
+            </div>
+          </div>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-sm shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40 transition-all flex items-center gap-2">
+              <span data-i18n="btn_view_work">Explore Projects</span>
+              <svg class="w-4 h-4 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#contact" class="px-6 py-3 rounded-xl border border-slate-300 dark:border-dark-border bg-white/60 dark:bg-dark-card/70 hover:border-brand-500 dark:hover:border-brand-500 font-semibold text-sm text-slate-800 dark:text-slate-200 transition-all">
+              <span data-i18n="btn_contact_me">Get in Touch</span>
+            </a>
+            <a href="https://github.com/Bekend" target="_blank" rel="noopener noreferrer" class="p-3 rounded-xl border border-slate-300 dark:border-dark-border bg-white/60 dark:bg-dark-card/70 text-slate-700 dark:text-slate-300 hover:text-brand-500 dark:hover:text-brand-400 transition-colors" title="GitHub: Bekend">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Interactive Code Terminal Card -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-slate-200 dark:border-dark-border bg-slate-900 text-slate-200 shadow-2xl overflow-hidden font-mono text-xs leading-relaxed glow-blue">
+            
+            <!-- Terminal Header -->
+            <div class="bg-slate-950 px-4 py-3 flex items-center justify-between border-b border-slate-800">
+              <div class="flex items-center gap-2">
+                <span class="w-3 h-3 rounded-full bg-red-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span>
+                <span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span>
+                <span class="ml-2 text-slate-400 text-[11px]">shahab@homelab-dl360p:~#</span>
+              </div>
+              <span class="text-[10px] text-brand-400 px-2 py-0.5 rounded bg-brand-500/10 border border-brand-500/20">ESXi 6.5</span>
+            </div>
+
+            <!-- Terminal Body -->
+            <div class="p-4 sm:p-5 space-y-3.5 text-[11px] sm:text-xs">
+              <div>
+                <span class="text-cyber-emerald">$</span> <span class="text-slate-300">neofetch --hardware</span>
+              </div>
+              <div class="text-slate-400 space-y-1 pl-2 border-l-2 border-slate-700/60">
+                <p><span class="text-brand-400 font-semibold">Node:</span> HP ProLiant DL360p Gen8 Enterprise</p>
+                <p><span class="text-brand-400 font-semibold">Hypervisor:</span> VMware ESXi 6.5 & Ubuntu Server</p>
+                <p><span class="text-brand-400 font-semibold">Mesh Network:</span> Tailscale SDN + Port Forwarding + DMZ</p>
+                <p><span class="text-brand-400 font-semibold">Containers:</span> Docker Engine + Nginx Reverse Proxy</p>
+              </div>
+
+              <div class="pt-1">
+                <span class="text-cyber-emerald">$</span> <span class="text-slate-300">python3 -c "import ai_pipeline, pccc"</span>
+              </div>
+              <div class="text-slate-400 space-y-1 pl-2 border-l-2 border-slate-700/60">
+                <p class="text-cyber-cyan">> Status: Initializing PCCC Corpus Ingestion...</p>
+                <p>> 29 Clinical Sessions • 16kHz PCM • Bale Bot Telemetry [OK]</p>
+                <p>> Quantized Models: Ollama (GGUF 4_K_M) [ACTIVE]</p>
+              </div>
+
+              <div class="pt-1">
+                <span class="text-cyber-emerald">$</span> <span class="text-slate-300">godot --headless --run-tests</span>
+              </div>
+              <div class="text-slate-400 pl-2 border-l-2 border-slate-700/60">
+                <p class="text-emerald-400">> MapGen: 44x28 biomes generated [PASS]</p>
+                <p class="text-emerald-400">> 6-Faction AI Diplomacy Simulation: 0 crashes [PASS]</p>
+              </div>
+            </div>
+
+            <!-- Terminal Footer -->
+            <div class="bg-slate-950/80 px-4 py-2 border-t border-slate-800/80 flex items-center justify-between text-[10px] text-slate-500">
+              <span class="flex items-center gap-1.5">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+                Daemon Running: WebIDM & Scrapers
+              </span>
+              <span>Gorgan, Iran (UTC+3:30)</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Conference / Academic Spotlight Banner -->
+  <section class="py-6">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="relative overflow-hidden rounded-2xl border border-brand-500/30 bg-gradient-to-r from-brand-900/30 via-slate-900/50 to-cyber-violet/20 p-6 sm:p-8 backdrop-blur-xl glow-blue">
+        <div class="absolute -right-12 -top-12 w-48 h-48 bg-brand-500/10 rounded-full blur-2xl pointer-events-none"></div>
+        
+        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+          <div class="space-y-2">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-brand-500/20 text-brand-400 border border-brand-500/30">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+              <span data-i18n="spotlight_badge">Oral Presentation • BioIntelligence 2026</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold text-white tracking-tight" data-i18n="spotlight_title">
+              PCCC: Persian Clinical Conversation Corpus
+            </h3>
+            <p class="text-sm text-slate-300 max-w-2xl leading-relaxed" data-i18n="spotlight_desc">
+              Accepted for Oral Presentation at Shahid Beheshti University (The First Conference on BioIntelligence 2026). Developed an in-the-wild medical speech-to-text corpus with autonomous IoT recording hardware, real-time Bale Bot telemetry heartbeat, and audio diarization processing.
+            </p>
+            <div class="text-xs text-slate-400 pt-1">
+              <span class="font-semibold text-slate-200" data-i18n="spotlight_authors_label">Authors:</span> S. S. Hosseini Bay, R. Yazdi, M. Yaghoubi
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row md:flex-col gap-2.5 shrink-0">
+            <a href="https://github.com/Bekend/medical-dataset" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium text-xs flex items-center justify-center gap-2 border border-white/15 transition-all">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span data-i18n="spotlight_btn">View Repository</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+        <div>
+          <div class="text-xs font-mono font-semibold text-brand-500 uppercase tracking-wider mb-2" data-i18n="sec_projects_tag">Featured Works</div>
+          <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight" data-i18n="sec_projects_title">Engineering & Production Projects</h2>
+          <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-xl" data-i18n="sec_projects_subtitle">
+            A curated selection of production web platforms, applied AI pipelines, custom WordPress plugins, and systems software built to solve real business and research problems.
+          </p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="flex flex-wrap gap-2 text-xs font-medium" id="filterContainer">
+          <button onclick="filterProjects('all')" class="filter-btn active px-3.5 py-1.5 rounded-lg bg-brand-600 text-white shadow-sm transition-all" data-filter="all" data-i18n="filter_all">All</button>
+          <button onclick="filterProjects('wp')" class="filter-btn px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-dark-border bg-white dark:bg-dark-card text-slate-700 dark:text-slate-300 hover:border-brand-500 transition-all" data-filter="wp" data-i18n="filter_wp">Web & Plugins</button>
+          <button onclick="filterProjects('ai')" class="filter-btn px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-dark-border bg-white dark:bg-dark-card text-slate-700 dark:text-slate-300 hover:border-brand-500 transition-all" data-filter="ai" data-i18n="filter_ai">AI & Systems</button>
+          <button onclick="filterProjects('game')" class="filter-btn px-3.5 py-1.5 rounded-lg border border-slate-300 dark:border-dark-border bg-white dark:bg-dark-card text-slate-700 dark:text-slate-300 hover:border-brand-500 transition-all" data-filter="game" data-i18n="filter_game">Games & Bots</button>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="projectsGrid">
+
+        <!-- 1. Venorad Production Platform & Plugins -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 hover:border-brand-500/50" data-cat="wp">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20" data-i18n="badge_live">Live Production</span>
+              <a href="https://venorad.ir" target="_blank" rel="noopener noreferrer" class="text-xs text-brand-500 hover:underline flex items-center gap-1 font-mono">venorad.ir <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></a>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="p1_title">Venorad E-Commerce & Custom Plugin Suite</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="p1_desc">
+              Built and architected the full e-commerce store with high performance caching, Hummingbird optimization, and custom plugins:
+            </p>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+              <li><strong class="text-slate-700 dark:text-slate-200">WC Perfume Notes:</strong> Interactive olfactory pyramid (Top/Mid/Base) with transient cache.</li>
+              <li><strong class="text-slate-700 dark:text-slate-200">WC Live Filters:</strong> AJAX-based live product filtering without page reload.</li>
+              <li><strong class="text-slate-700 dark:text-slate-200">Vector Matcher:</strong> Pre-computed scent similarity across 2500+ items without runtime query bloat.</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200 dark:border-dark-border mt-6">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">WooCommerce</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">PHP</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Python ETL</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">WoodMart</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <a href="https://github.com/Bekend/wc-perfume-notes" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-500 hover:text-brand-400 flex items-center gap-1">
+                GitHub Plugin <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+              <a href="https://venorad.ir" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-500 hover:text-emerald-400 flex items-center gap-1">
+                Live Store <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. PCCC Speech Dataset & Android/Bale Daemon -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 hover:border-brand-500/50" data-cat="ai">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-violet-500/10 text-violet-600 dark:text-violet-400 border border-violet-500/20" data-i18n="badge_research">Clinical AI & IoT</span>
+              <span class="text-[11px] font-mono text-slate-500">BioIntelligence 2026</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="p2_title">PCCC: Clinical Audio IoT & Telemetry Daemon</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="p2_desc">
+              Clinical dataset collection system for in-the-wild doctor-patient interactions:
+            </p>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+              <li>Custom Android background daemon recording uncompressed 16kHz PCM audio during doctor appointments.</li>
+              <li>Integrated Bale Messenger Bot acting as an automated heartbeat monitor, error notifier, and manual override trigger.</li>
+              <li>Data diarization pipeline for multi-speaker acoustic clinical rooms.</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200 dark:border-dark-border mt-6">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Python</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Android / Java</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Bale API</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Diarization</span>
+            </div>
+            <div>
+              <a href="https://github.com/Bekend/medical-dataset" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-brand-500 hover:text-brand-400 flex items-center gap-1">
+                GitHub Repository <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Modern Turn-Based Strategy Game (Godot) -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 hover:border-brand-500/50" data-cat="game">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-amber-500/10 text-amber-600 dark:text-amber-400 border border-amber-500/20" data-i18n="badge_gamedev">4X Grand Strategy</span>
+              <span class="text-[11px] font-mono text-slate-500">Godot 4.x</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="p3_title">Turn-Based 4X Tactical Strategy Game</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="p3_desc">
+              Comprehensive strategy game built with Godot 4.x featuring decoupled architecture:
+            </p>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+              <li>Procedural map generation supporting Small (28x18) to Huge (80x50) dynamic biome grids.</li>
+              <li>Autonomous AI diplomacy and decision engine coordinating 1 to 6 AI factions simultaneously.</li>
+              <li>Tech tree progression, city building, combat simulation, and automated test runners.</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200 dark:border-dark-border mt-6">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Godot 4.x</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">GDScript</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Procedural Gen</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Unit Testing</span>
+            </div>
+            <div class="text-xs text-slate-500 dark:text-slate-400 italic">
+              Desktop & WebAssembly build pipeline ready
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. WebIDM & Automotive Scraper Bots -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 hover:border-brand-500/50" data-cat="game">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 border border-cyan-500/20" data-i18n="badge_auto">Automation & Scrapers</span>
+              <span class="text-[11px] font-mono text-slate-500">Python Async</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="p4_title">WebIDM & Real-Time Alert Bot Ecosystem</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="p4_desc">
+              High-throughput asynchronous automation systems:
+            </p>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+              <li><strong class="text-slate-700 dark:text-slate-200">WebIDM:</strong> Asynchronous multi-thread chunked download manager with Google Drive stream support, Web UI, and Telegram remote controller.</li>
+              <li><strong class="text-slate-700 dark:text-slate-200">Automotive Scraper:</strong> Real-time Divar & Sheypoor scraper monitoring automotive transfer rights with instant Telegram alerts.</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200 dark:border-dark-border mt-6">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Python Asyncio</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Telegram API</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Scraping</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">WebSockets</span>
+            </div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">
+              Personal Infrastructure & Automated Ingestion
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Homelab Infrastructure & Cloud Routing -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 hover:border-brand-500/50" data-cat="ai">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20" data-i18n="badge_infra">Physical Infrastructure</span>
+              <span class="text-[11px] font-mono text-slate-500">HP DL360p Gen8</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="p5_title">Enterprise Homelab & Secure Tunneling Mesh</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="p5_desc">
+              Practical system administration and datacenter hardware operations:
+            </p>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+              <li>Self-hosted HP DL360p Gen8 rack server virtualized with VMware ESXi 6.5 & Hyper-V.</li>
+              <li>Mesh routing with Tailscale SDN, DMZ zoning, and port forwarding for secure hybrid-cloud access.</li>
+              <li>Multi-cloud nodes on Hetzner, DigitalOcean, and ArvanCloud for reverse proxy and isolated workloads.</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200 dark:border-dark-border mt-6">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">VMware ESXi</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Docker</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Tailscale</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Ubuntu Server</span>
+            </div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">
+              Hardware Diagnostics & Networking
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Commercial Production Archives -->
+        <div class="project-card glass-card rounded-2xl p-6 flex flex-col justify-between transition-all hover:-translate-y-1 hover:border-brand-500/50" data-cat="wp">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <span class="px-2.5 py-1 rounded-md text-[11px] font-mono font-semibold bg-slate-500/10 text-slate-600 dark:text-slate-400 border border-slate-500/20" data-i18n="badge_archive">Commercial Archives</span>
+              <span class="text-[11px] font-mono text-slate-500">4 Commercial Sites</span>
+            </div>
+
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white" data-i18n="p6_title">Commercial Web Platforms & Architecture</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="p6_desc">
+              End-to-end development of specialized commercial web platforms:
+            </p>
+            <ul class="text-xs text-slate-500 dark:text-slate-400 space-y-1.5 list-disc list-inside">
+              <li><strong class="text-slate-700 dark:text-slate-200">RG1.ir:</strong> Digital gaming marketplace for original CD-keys (Steam/Uplay) with automated payment gateways.</li>
+              <li><strong class="text-slate-700 dark:text-slate-200">RexMovie.ir:</strong> High-traffic media portal with content team management and CDN storage.</li>
+              <li><strong class="text-slate-700 dark:text-slate-200">AlphaFundedTrader:</strong> Architectural refactor, performance overhaul, and UI/UX modernization.</li>
+            </ul>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200 dark:border-dark-border mt-6">
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">WooCommerce</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Performance Tuning</span>
+              <span class="px-2 py-0.5 rounded text-[10px] font-mono bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Payment Gateways</span>
+            </div>
+            <div class="text-xs text-slate-500 dark:text-slate-400">
+              Commercial Delivery & Client Management
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Competencies & Skills Bento Grid -->
+  <section id="skills" class="py-20 bg-slate-100/50 dark:bg-slate-950/40 border-y border-slate-200 dark:border-dark-border/50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-12">
+        <div class="text-xs font-mono font-semibold text-brand-500 uppercase tracking-wider mb-2" data-i18n="sec_skills_tag">Core Competencies</div>
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight" data-i18n="sec_skills_title">Technical Matrix & Infrastructure</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 mt-2 max-w-xl" data-i18n="sec_skills_subtitle">
+          Versatile engineering stack spanning low-level system virtualization, robust backend services, automated AI pipelines, and responsive web applications.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <!-- Category 1: Languages & Backend -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-500">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="skill_cat1">Languages & Backend</h3>
+          <ul class="text-xs space-y-2.5 text-slate-600 dark:text-slate-300">
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Python</span>
+              <span class="text-[10px] font-mono text-brand-500 font-bold">Proficient</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">PHP (WordPress / WC)</span>
+              <span class="text-[10px] font-mono text-brand-500 font-bold">Advanced</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">GDScript (Godot 4)</span>
+              <span class="text-[10px] font-mono text-brand-500 font-bold">Advanced</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Java (Android SDK)</span>
+              <span class="text-[10px] font-mono text-slate-400">Intermediate</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Golang</span>
+              <span class="text-[10px] font-mono text-slate-400">Elementary</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">HTML5 / CSS3 / JS</span>
+              <span class="text-[10px] font-mono text-brand-500 font-bold">Modern Web</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 2: Infrastructure & DevOps -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-cyber-emerald/10 flex items-center justify-center text-cyber-emerald">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="skill_cat2">Infrastructure & DevOps</h3>
+          <ul class="text-xs space-y-2.5 text-slate-600 dark:text-slate-300">
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Physical Server Hardware</span>
+              <span class="text-[10px] font-mono text-cyber-emerald font-bold">HP DL360p Gen8</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">VMware ESXi 6.5</span>
+              <span class="text-[10px] font-mono text-cyber-emerald font-bold">Hypervisor</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Docker & Containers</span>
+              <span class="text-[10px] font-mono text-slate-400">Containers</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Tailscale Mesh / VPN</span>
+              <span class="text-[10px] font-mono text-cyber-emerald font-bold">Secure Routing</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Cloud Providers</span>
+              <span class="text-[10px] font-mono text-slate-400">Hetzner / ArvanCloud</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Nginx & Web Servers</span>
+              <span class="text-[10px] font-mono text-slate-400">Reverse Proxy</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 3: Applied AI & Automation -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-cyber-violet/10 flex items-center justify-center text-cyber-violet">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="skill_cat3">Applied AI & Automation</h3>
+          <ul class="text-xs space-y-2.5 text-slate-600 dark:text-slate-300">
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Local LLMs (Ollama)</span>
+              <span class="text-[10px] font-mono text-cyber-violet font-bold">Self-Hosted</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Model Quantization</span>
+              <span class="text-[10px] font-mono text-cyber-violet font-bold">GGUF / AWQ</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Web Scraping (Selenium/BS4)</span>
+              <span class="text-[10px] font-mono text-cyber-violet font-bold">Divar/Sheypoor</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Audio Diarization & STT</span>
+              <span class="text-[10px] font-mono text-slate-400">Clinical Data</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Bot Daemons</span>
+              <span class="text-[10px] font-mono text-cyber-violet font-bold">Telegram / Bale</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Google Colab & Pipelines</span>
+              <span class="text-[10px] font-mono text-slate-400">Data Processing</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Category 4: Web & E-Commerce Engineering -->
+        <div class="glass-card rounded-2xl p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-cyber-cyan/10 flex items-center justify-center text-cyber-cyan">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+          </div>
+          <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="skill_cat4">Web & E-Commerce</h3>
+          <ul class="text-xs space-y-2.5 text-slate-600 dark:text-slate-300">
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Plugin Development</span>
+              <span class="text-[10px] font-mono text-cyber-cyan font-bold">Clean WP Hooks</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">AJAX Live Filtering</span>
+              <span class="text-[10px] font-mono text-cyber-cyan font-bold">PushState Sync</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Speed Optimization</span>
+              <span class="text-[10px] font-mono text-cyber-cyan font-bold">Caching & LazyLoad</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">WoodMart Architecture</span>
+              <span class="text-[10px] font-mono text-slate-400">Theme Overrides</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Vector Similarity Match</span>
+              <span class="text-[10px] font-mono text-cyber-cyan font-bold">Pre-Computed Meta</span>
+            </li>
+            <li class="flex items-center justify-between">
+              <span class="font-semibold">Adobe Photoshop</span>
+              <span class="text-[10px] font-mono text-slate-400">UI & Asset Prep</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Experience & Education Timeline -->
+  <section id="experience" class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="mb-12 text-center">
+        <div class="text-xs font-mono font-semibold text-brand-500 uppercase tracking-wider mb-2" data-i18n="sec_exp_tag">Track Record</div>
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight" data-i18n="sec_exp_title">Experience & Education</h2>
+      </div>
+
+      <div class="relative border-l-2 border-slate-200 dark:border-dark-border ml-4 sm:ml-32 space-y-12">
+
+        <!-- Timeline Item 1: Venorad Lead -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-white dark:border-[#0a0d14] group-hover:scale-125 transition-transform"></div>
+          <span class="sm:absolute sm:-left-32 sm:text-right top-1 text-xs font-mono font-bold text-brand-500 block mb-1 sm:mb-0">2024 - Present</span>
+          <div class="glass-card rounded-xl p-5 space-y-2">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="exp1_title">Full-Stack Architect & Automation Lead — Venorad.ir</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp1_desc">
+              Designed the infrastructure and developed 4 specialized WooCommerce plugins (interactive note pyramids, live AJAX filtering, custom order status, and vector scent matching). Developed an automated Python ETL pipeline that ingested and structured 2500+ luxury perfume products from global databases.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: PCCC & BioIntelligence -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyber-violet border-4 border-white dark:border-[#0a0d14] group-hover:scale-125 transition-transform"></div>
+          <span class="sm:absolute sm:-left-32 sm:text-right top-1 text-xs font-mono font-bold text-cyber-violet block mb-1 sm:mb-0">2024 - 2026</span>
+          <div class="glass-card rounded-xl p-5 space-y-2">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="exp2_title">Co-Author & Systems Lead — PCCC Clinical Corpus</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp2_desc">
+              Pioneered the acoustic clinical speech corpus in Iran with 29 real doctor-patient sessions. Engineered an Android background service and Bale Messenger telemetry daemon for autonomous continuous recording. Paper accepted for <strong>Oral Presentation at the First Conference on BioIntelligence 2026 (Shahid Beheshti University)</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Commercial E-Commerce Projects -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-cyber-emerald border-4 border-white dark:border-[#0a0d14] group-hover:scale-125 transition-transform"></div>
+          <span class="sm:absolute sm:-left-32 sm:text-right top-1 text-xs font-mono font-bold text-cyber-emerald block mb-1 sm:mb-0">2022 - 2024</span>
+          <div class="glass-card rounded-xl p-5 space-y-2">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="exp3_title">Full-Stack E-Commerce Developer — RG1, RexMovie, PSNPlus</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="exp3_desc">
+              Built and launched multiple high-volume commercial projects from scratch: RG1.ir (original PC games license store), RexMovie.ir (high-traffic movie portal with editorial team lead), and PSNPlus.ir (subscription store). Managed hosting architectures, automated payment integrations, and content distribution.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4: Education -->
+        <div class="relative pl-6 sm:pl-8 group">
+          <div class="absolute -left-[9px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white dark:border-[#0a0d14] group-hover:scale-125 transition-transform"></div>
+          <span class="sm:absolute sm:-left-32 sm:text-right top-1 text-xs font-mono font-bold text-slate-400 block mb-1 sm:mb-0">2022 - 2026</span>
+          <div class="glass-card rounded-xl p-5 space-y-2">
+            <h3 class="font-bold text-base text-slate-900 dark:text-white" data-i18n="edu_title">B.Sc. in Computer Engineering — Golestan University</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="edu_desc">
+              Currently in 9th term. Focused on Operating Systems, Computer Networks, Software Engineering, and Machine Learning. Practical laboratory exploration on hardware homelabs and virtualized infrastructures.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Languages & Personal Highlights -->
+  <section class="py-12 bg-slate-100/30 dark:bg-slate-950/20 border-t border-slate-200 dark:border-dark-border/40">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Languages -->
+        <div class="glass-card rounded-xl p-5 space-y-3">
+          <div class="flex items-center gap-2 text-brand-500 font-bold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"/></svg>
+            <span data-i18n="card_lang_title">Human Languages</span>
+          </div>
+          <ul class="text-xs space-y-2 text-slate-600 dark:text-slate-300">
+            <li class="flex justify-between"><span>Persian (فارسی)</span> <span class="font-mono text-emerald-500 font-semibold" data-i18n="lang_persian">Native</span></li>
+            <li class="flex justify-between"><span>English</span> <span class="font-mono text-brand-500 font-semibold" data-i18n="lang_english">Fluent / Professional</span></li>
+            <li class="flex justify-between"><span>German (Deutsch)</span> <span class="font-mono text-slate-400 font-semibold" data-i18n="lang_german">Elementary (A1/A2)</span></li>
+          </ul>
+        </div>
+
+        <!-- Engineering Mindset -->
+        <div class="glass-card rounded-xl p-5 space-y-3">
+          <div class="flex items-center gap-2 text-cyber-emerald font-bold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+            <span data-i18n="card_mindset_title">Engineering Philosophy</span>
+          </div>
+          <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="card_mindset_desc">
+            Pragmatic, production-driven problem solver. I believe in testing on real hardware, avoiding unnecessary bloat, leveraging automated data ingestion pipelines, and creating tangible commercial value.
+          </p>
+        </div>
+
+        <!-- Target Roles -->
+        <div class="glass-card rounded-xl p-5 space-y-3">
+          <div class="flex items-center gap-2 text-cyber-violet font-bold text-sm">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span data-i18n="card_target_title">Available For</span>
+          </div>
+          <ul class="text-xs space-y-1.5 text-slate-600 dark:text-slate-300">
+            <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> <span data-i18n="role1">Software / Backend Engineer (Python/PHP)</span></li>
+            <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-cyber-emerald"></span> <span data-i18n="role2">Infrastructure / Homelab Systems Engineer</span></li>
+            <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-cyber-violet"></span> <span data-i18n="role3">Applied AI & Automation Pipeline Developer</span></li>
+            <li class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> <span data-i18n="role4">Custom WooCommerce / WordPress Solutions</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Footer Section -->
+  <footer id="contact" class="py-20 relative overflow-hidden border-t border-slate-200 dark:border-dark-border">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-8">
+      
+      <div class="space-y-3">
+        <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight" data-i18n="footer_title">Let's Build Something Exceptional</h2>
+        <p class="text-sm text-slate-600 dark:text-slate-400 max-w-lg mx-auto" data-i18n="footer_desc">
+          Whether you need a dedicated backend engineer, custom WooCommerce plugin development, automated scraping pipelines, or system infrastructure design — let's connect!
+        </p>
+      </div>
+
+      <!-- Contact Action Card -->
+      <div class="glass-panel p-6 sm:p-8 rounded-2xl max-w-xl mx-auto space-y-6 glow-blue">
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          
+          <!-- Direct Email Button -->
+          <a href="mailto:Shahabhosseinibay@gmail.com" class="w-full sm:w-auto px-6 py-3 rounded-xl bg-brand-600 hover:bg-brand-500 text-white font-semibold text-xs flex items-center justify-center gap-2 shadow-lg shadow-brand-500/25 transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span>Shahabhosseinibay@gmail.com</span>
+          </a>
+
+          <!-- Copy Email Helper -->
+          <button onclick="copyEmail()" id="copyEmailBtn" class="w-full sm:w-auto px-4 py-3 rounded-xl border border-slate-300 dark:border-dark-border bg-white dark:bg-dark-card text-slate-700 dark:text-slate-200 hover:border-brand-500 text-xs font-semibold flex items-center justify-center gap-1.5 transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <span id="copyEmailText" data-i18n="btn_copy_email">Copy Email</span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-center gap-6 pt-2 text-sm text-slate-500 dark:text-slate-400">
+          <a href="https://github.com/Bekend" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 flex items-center gap-1.5 transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            <span>github.com/Bekend</span>
+          </a>
+          <span>•</span>
+          <span class="flex items-center gap-1">
+            <svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <span data-i18n="location_val">Gorgan, Iran (Remote Friendly)</span>
+          </span>
+        </div>
+      </div>
+
+      <div class="text-xs text-slate-500 dark:text-slate-500 pt-8 border-t border-slate-200/60 dark:border-dark-border/40 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div>
+          © 2026 Seyed Shahabeddin Hosseini Bay (شهاب حسینی بای) • <span class="font-mono text-brand-500">shahab-hb.ir</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="#hero" class="hover:text-brand-500 transition-colors" data-i18n="back_to_top">Back to top ↑</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Bilingual & Interactive Engine -->
+  <script>
+    // i18n Translation Dictionary (English / Persian)
+    const i18n = {
+      en: {
+        nav_name: "Shahab Hosseini Bay",
+        nav_role: "Software & Systems Engineer",
+        nav_about: "About",
+        nav_projects: "Projects",
+        nav_experience: "Experience",
+        nav_skills: "Skills & Infra",
+        nav_contact: "Contact",
+        btn_cv: "Export CV",
+        hero_status: "Open to Engineering Roles, Backend & Systems Projects",
+        hero_greeting: "Hi, I'm",
+        hero_subtitle: "Software Engineer • Applied AI & Systems Architect • Full-Stack Developer",
+        hero_desc: "Computer Engineering student at Golestan University (Entrance 2022) with practical, production-tested experience. From building physical enterprise rack homelabs (HP Gen8, ESXi, Tailscale) and custom high-traffic WooCommerce plugins (Venorad) to developing clinical AI datasets presented at the First Conference on BioIntelligence 2026 (Shahid Beheshti University) and 4X strategy game engines in Godot.",
+        metric_products: "Catalog Ingestion (Venorad)",
+        metric_plugins: "Custom WP Plugins",
+        metric_conf: "BioIntelligence Presentation",
+        btn_view_work: "Explore Projects",
+        btn_contact_me: "Get in Touch",
+        spotlight_badge: "Oral Presentation • BioIntelligence 2026",
+        spotlight_title: "PCCC: Persian Clinical Conversation Corpus",
+        spotlight_desc: "Accepted for Oral Presentation at Shahid Beheshti University (The First Conference on BioIntelligence 2026). Developed an in-the-wild medical speech-to-text corpus with autonomous IoT recording hardware, real-time Bale Bot telemetry heartbeat, and audio diarization processing.",
+        spotlight_authors_label: "Authors:",
+        spotlight_btn: "View Repository",
+        sec_projects_tag: "Featured Works",
+        sec_projects_title: "Engineering & Production Projects",
+        sec_projects_subtitle: "A curated selection of production web platforms, applied AI pipelines, custom WordPress plugins, and systems software built to solve real business and research problems.",
+        filter_all: "All",
+        filter_wp: "Web & Plugins",
+        filter_ai: "AI & Systems",
+        filter_game: "Games & Bots",
+        badge_live: "Live Production",
+        badge_research: "Clinical AI & IoT",
+        badge_gamedev: "4X Grand Strategy",
+        badge_auto: "Automation & Scrapers",
+        badge_infra: "Physical Infrastructure",
+        badge_archive: "Commercial Archives",
+        p1_title: "Venorad E-Commerce & Custom Plugin Suite",
+        p1_desc: "Built and architected the full e-commerce store with high performance caching, Hummingbird optimization, and custom plugins:",
+        p2_title: "PCCC: Clinical Audio IoT & Telemetry Daemon",
+        p2_desc: "Clinical dataset collection system for in-the-wild doctor-patient interactions:",
+        p3_title: "Turn-Based 4X Tactical Strategy Game",
+        p3_desc: "Comprehensive strategy game built with Godot 4.x featuring decoupled architecture:",
+        p4_title: "WebIDM & Real-Time Alert Bot Ecosystem",
+        p4_desc: "High-throughput asynchronous automation systems:",
+        p5_title: "Enterprise Homelab & Secure Tunneling Mesh",
+        p5_desc: "Practical system administration and datacenter hardware operations:",
+        p6_title: "Commercial Web Platforms & Architecture",
+        p6_desc: "End-to-end development of specialized commercial web platforms:",
+        sec_skills_tag: "Core Competencies",
+        sec_skills_title: "Technical Matrix & Infrastructure",
+        sec_skills_subtitle: "Versatile engineering stack spanning low-level system virtualization, robust backend services, automated AI pipelines, and responsive web applications.",
+        skill_cat1: "Languages & Backend",
+        skill_cat2: "Infrastructure & DevOps",
+        skill_cat3: "Applied AI & Automation",
+        skill_cat4: "Web & E-Commerce",
+        sec_exp_tag: "Track Record",
+        sec_exp_title: "Experience & Education",
+        exp1_title: "Full-Stack Architect & Automation Lead — Venorad.ir",
+        exp1_desc: "Designed the infrastructure and developed 4 specialized WooCommerce plugins (interactive note pyramids, live AJAX filtering, custom order status, and vector scent matching). Developed an automated Python ETL pipeline that ingested and structured 2500+ luxury perfume products from global databases.",
+        exp2_title: "Co-Author & Systems Lead — PCCC Clinical Corpus",
+        exp2_desc: "Pioneered the acoustic clinical speech corpus in Iran with 29 real doctor-patient sessions. Engineered an Android background service and Bale Messenger telemetry daemon for autonomous continuous recording. Paper accepted for Oral Presentation at the First Conference on BioIntelligence 2026 (Shahid Beheshti University).",
+        exp3_title: "Full-Stack E-Commerce Developer — RG1, RexMovie, PSNPlus",
+        exp3_desc: "Built and launched multiple high-volume commercial projects from scratch: RG1.ir (original PC games license store), RexMovie.ir (high-traffic movie portal with editorial team lead), and PSNPlus.ir (subscription store). Managed hosting architectures, automated payment integrations, and content distribution.",
+        edu_title: "B.Sc. in Computer Engineering — Golestan University",
+        edu_desc: "Currently in 9th term. Focused on Operating Systems, Computer Networks, Software Engineering, and Machine Learning. Practical laboratory exploration on hardware homelabs and virtualized infrastructures.",
+        card_lang_title: "Human Languages",
+        lang_persian: "Native",
+        lang_english: "Fluent / Professional",
+        lang_german: "Elementary (A1/A2)",
+        card_mindset_title: "Engineering Philosophy",
+        card_mindset_desc: "Pragmatic, production-driven problem solver. I believe in testing on real hardware, avoiding unnecessary bloat, leveraging automated data ingestion pipelines, and creating tangible commercial value.",
+        card_target_title: "Available For",
+        role1: "Software / Backend Engineer (Python/PHP)",
+        role2: "Infrastructure / Homelab Systems Engineer",
+        role3: "Applied AI & Automation Pipeline Developer",
+        role4: "Custom WooCommerce / WordPress Solutions",
+        footer_title: "Let's Build Something Exceptional",
+        footer_desc: "Whether you need a dedicated backend engineer, custom WooCommerce plugin development, automated scraping pipelines, or system infrastructure design — let's connect!",
+        btn_copy_email: "Copy Email",
+        location_val: "Gorgan, Iran (Remote Friendly)",
+        back_to_top: "Back to top ↑"
+      },
+      fa: {
+        nav_name: "سید شهاب‌الدین حسینی بای",
+        nav_role: "مهندس نرم‌افزار و معمار سیستم",
+        nav_about: "درباره من",
+        nav_projects: "پروژه‌ها",
+        nav_experience: "سوابق کاری",
+        nav_skills: "مهارت‌ها و زیرساخت",
+        nav_contact: "تماس",
+        btn_cv: "خروجی رزومه (PDF)",
+        hero_status: "آماده همکاری در موقعیت‌های شغلی مهندسی نرم‌افزار و بک‌اند",
+        hero_greeting: "سلام، من",
+        hero_subtitle: "مهندس نرم‌افزار • معمار سیستم و زیرساخت • توسعه‌دهنده فول‌استک",
+        hero_desc: "دانشجوی مهندسی کامپیوتر دانشگاه گلستان (ورودی ۱۴۰۱) با تجربیات عمیق عملی و پروداکشن؛ از راه‌اندازی سرور فیزیکی سازمانی (HP Gen8، ESXi، مش‌نتورک Tailscale) و توسعه افزونه‌های اختصاصی فروشگاهی ووکامرس (ونوراد) تا ساخت پایپ‌لاین صوتی داده‌های پزشکی ارائه‌شده به صورت شفاهی در کنفرانس هوش زیستی ۲۰۲۶ دانشگاه شهید بهشتی و توسعه موتور بازی‌های استراتژیک در گودو (Godot).",
+        metric_products: "درج خودکار محصول (ونوراد)",
+        metric_plugins: "افزونه اختصاصی ووکامرس",
+        metric_conf: "ارائه شفاهی شهید بهشتی",
+        btn_view_work: "مشاهده پروژه‌ها",
+        btn_contact_me: "ارتباط با من",
+        spotlight_badge: "ارائه شفاهی (Oral) • کنفرانس هوش زیستی ۲۰۲۶",
+        spotlight_title: "پیکره بالینی PCCC: گفت‌وگوی طبیعی پزشک و بیمار",
+        spotlight_desc: "پذیرفته‌شده برای ارائه شفاهی در دانشگاه شهید بهشتی (اولین کنفرانس بین‌المللی هوش زیستی ۲۰۲۶). توسعه پیکره صوتی-متنی مکالمات واقعی مطب‌ها با سیستم ضبط خودکار اندروید، هارت‌بیت بازوی بله برای مانیتورینگ سلامت سخت‌افزار و پایپ‌لاین تفکیک گوینده (Diarization).",
+        spotlight_authors_label: "پژوهشگران:",
+        spotlight_btn: "مشاهده ریپوزیتوری",
+        sec_projects_tag: "نمونه‌کارها و پروژه‌ها",
+        sec_projects_title: "پروژه‌های مهندسی و عملیاتی",
+        sec_projects_subtitle: "گلچینی از پلتفرم‌های تجاری فعال، پایپ‌لاین‌های هوش مصنوعی، پلاگین‌های اختصاصی و سیستم‌های مبتنی بر شبکه که برای رفع نیازهای واقعی ساخته شده‌اند.",
+        filter_all: "همه",
+        filter_wp: "وب و افزونه‌ها",
+        filter_ai: "هوش مصنوعی و زیرساخت",
+        filter_game: "بازی و ربات‌ها",
+        badge_live: "پروژه فعال تجاری",
+        badge_research: "هوش بالینی و اینترنت اشیا",
+        badge_gamedev: "استراتژی نوبتی ۴X",
+        badge_auto: "اتومیشن و اسکرپر",
+        badge_infra: "زیرساخت و سرور فیزیکی",
+        badge_archive: "پروژه‌های بایگانی‌شده",
+        p1_title: "پلتفرم فروشگاهی ونوراد و مجموعه افزونه‌های اختصاصی",
+        p1_desc: "معماری کامل سایت، بهینه‌سازی سرعت و کش با Hummingbird و توسعه ۳ پلاگین اختصاصی ووکامرس:",
+        p2_title: "پیکره صوتی بالینی PCCC و بازوی تلمتری بله",
+        p2_desc: "سیستم گردآوری داده‌های صوتی مطب‌های پزشکی در شرایط واقعی بالینی:",
+        p3_title: "بازی استراتژیک نوبتی تاکتیکال (موتور گودو)",
+        p3_desc: "توسعه کامل بازی گرند استراتژی با معماری ماژولار در گودو ۴ (GDScript):",
+        p4_title: "مدیر دانلود WebIDM و اکوسیستم اسکرپرهای لحظه‌ای",
+        p4_desc: "سامانه‌های اتومیشن ناهمگام و پردازش داده‌ها در لحظه با پایتون:",
+        p5_title: "هوم‌لب سازمانی و شبکه مش تانلینگ امن",
+        p5_desc: "مدیریت سیستم‌های عملیاتی و سخت‌افزار دیتاسنتری در مقیاس واقعی:",
+        p6_title: "پلتفرم‌های تجاری و پروژه‌های توسعه وب",
+        p6_desc: "توسعه صفر تا صد پلتفرم‌های پربازدید و تخصصی تجارت الکترونیک:",
+        sec_skills_tag: "ماتریس مهارت‌ها",
+        sec_skills_title: "توانمندی‌های فنی و زیرساختی",
+        sec_skills_subtitle: "تسلط بر لایه‌های مختلف مهندسی کامپیوتر از مجازی‌سازی سخت‌افزار تا پیاده‌سازی سرویس‌های بک‌اند و وب‌سایت‌های تجاری پاسخگو.",
+        skill_cat1: "زبان‌ها و بک‌اند",
+        skill_cat2: "زیرساخت و دوآپس",
+        skill_cat3: "هوش مصنوعی و اتومیشن",
+        skill_cat4: "توسعه وب و ووکامرس",
+        sec_exp_tag: "مسیر حرفه‌ای",
+        sec_exp_title: "سوابق کاری و تحصیلی",
+        exp1_title: "معمار ارشد فنی و مسئول اتومیشن — فروشگاه ونوراد (Venorad.ir)",
+        exp1_desc: "طراحی کامل ساختار فروشگاه و توسعه ۴ افزونه اختصاصی (هرم آکوردها، فیلتر ایجکس، وضعیت انبار سفارشی و تطبیق برداری عطرها). راه‌اندازی پایپ‌لاین استخراج خودکار پایتون برای ورود و ساختاربندی بیش از ۲۵۰۰ محصول با تصاویر وب‌پی و متاهای تخصصی.",
+        exp2_title: "پژوهشگر و توسعه‌دهنده ارشد سیستم — پروژه بالینی PCCC",
+        exp2_desc: "ایجاد اولین پیکره گفت‌وگوی بالینی بدون سناریو در ایران با ۲۹ جلسه در مطب‌های فعال. برنامه‌نویسی سرویس پس‌زمینه اندروید و بازوی پیام‌رسان بله برای مانیتورینگ سلامت دستگاه ضبط و هارت‌بیت. پذیرش مقاله برای ارائه شفاهی در اولین کنفرانس هوش زیستی ۲۰۲۶ دانشگاه شهید بهشتی.",
+        exp3_title: "توسعه‌دهنده وب و فروشگاه‌های اینترنتی — پروژه‌های RG1، رکس‌مووی، پی‌اس‌ان پلاس",
+        exp3_desc: "راه‌اندازی از پایه و مدیریت پلتفرم‌های پرترافیک فروش آنلاین: سایت RG1.ir (فروشگاه لایسنس بازی‌های استیم/یوپلی)، سایت رکس‌مووی (پرتال دانلود فیلم و مدیریت تیم تولید محتوا) و سایت PSNPlus. مدیریت هاستینگ، اتصال درگاه‌ها و توزیع محتوا.",
+        edu_title: "کارشناسی مهندسی کامپیوتر — دانشگاه گلستان",
+        edu_desc: "دانشجوی ترم ۹ مهندسی کامپیوتر (ورودی ۱۴۰۱). تمرکز بر سیستم‌های عامل، شبکه‌های کامپیوتری، یادگیری ماشین و مهندسی نرم‌افزار همراه با تجربیات آزمایشگاهی در حوزه سرور و مجازی‌سازی.",
+        card_lang_title: "زبان‌های خارجی",
+        lang_persian: "زبان مادری (بومی)",
+        lang_english: "روان و مسلط (کاری)",
+        lang_german: "مقدماتی (A1/A2)",
+        card_mindset_title: "دیدگاه مهندسی",
+        card_mindset_desc: "حل مسئله با رویکرد عمل‌گرایانه و کاربردی در محیط واقعی. دوری از پیچیده‌سازی بی‌مورد، بهره‌گیری از پایپ‌لاین‌های اتومیشن و خلق ارزش ملموس اقتصادی و فنی.",
+        card_target_title: "زمینه‌های آماده همکاری",
+        role1: "مهندس نرم‌افزار و بک‌اند (پایتون / PHP)",
+        role2: "مهندس سیستم، هوم‌لب و زیرساخت شبکه",
+        role3: "توسعه‌دهنده پایپ‌لاین‌های هوش مصنوعی و اسکرپینگ",
+        role4: "توسعه اختصاصی افزونه‌های وردپرس و ووکامرس",
+        footer_title: "بیایید با هم همکاری کنیم",
+        footer_desc: "چه به دنبال مهندس بک‌اند برای سرویس‌های پایتونی باشید، چه به توسعه افزونه‌های تخصصی ووکامرس، اسکرپرهای لحظه‌ای یا راه‌اندازی زیرساخت شبکه نیاز داشته باشید — مشتاقانه آماده گفتگو هستم.",
+        btn_copy_email: "کپی آدرس ایمیل",
+        location_val: "گرگان، ایران (آماده کار ریموت)",
+        back_to_top: "بازگشت به بالا ↑"
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      const html = document.documentElement;
+      
+      if (lang === 'fa') {
+        html.setAttribute('dir', 'rtl');
+        html.setAttribute('lang', 'fa');
+        document.getElementById('langLabel').textContent = 'EN';
+      } else {
+        html.setAttribute('dir', 'ltr');
+        html.setAttribute('lang', 'en');
+        document.getElementById('langLabel').textContent = 'FA';
+      }
+
+      // Update text nodes
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+
+      localStorage.setItem('preferred_lang', lang);
+    }
+
+    function toggleLanguage() {
+      setLanguage(currentLang === 'en' ? 'fa' : 'en');
+    }
+
+    // Theme Switcher (Dark / Light)
+    function setTheme(isDark) {
+      const html = document.documentElement;
+      const sun = document.getElementById('themeIconSun');
+      const moon = document.getElementById('themeIconMoon');
+      
+      if (isDark) {
+        html.classList.add('dark');
+        html.classList.remove('light');
+        sun.classList.remove('hidden');
+        moon.classList.add('hidden');
+      } else {
+        html.classList.remove('dark');
+        html.classList.add('light');
+        sun.classList.add('hidden');
+        moon.classList.remove('hidden');
+      }
+      localStorage.setItem('preferred_theme', isDark ? 'dark' : 'light');
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.contains('dark');
+      setTheme(!isDark);
+    }
+
+    // Interactive Project Filtering
+    function filterProjects(category) {
+      const cards = document.querySelectorAll('.project-card');
+      const buttons = document.querySelectorAll('.filter-btn');
+
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter') === category) {
+          btn.classList.add('active', 'bg-brand-600', 'text-white');
+          btn.classList.remove('bg-white', 'dark:bg-dark-card', 'text-slate-700', 'dark:text-slate-300');
+        } else {
+          btn.classList.remove('active', 'bg-brand-600', 'text-white');
+          btn.classList.add('bg-white', 'dark:bg-dark-card', 'text-slate-700', 'dark:text-slate-300');
+        }
+      });
+
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-cat');
+        if (category === 'all' || cardCat === category) {
+          card.classList.remove('hidden');
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    }
+
+    // Copy Email to Clipboard helper
+    function copyEmail() {
+      const email = 'Shahabhosseinibay@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const textSpan = document.getElementById('copyEmailText');
+        const orig = textSpan.textContent;
+        textSpan.textContent = currentLang === 'fa' ? 'کپی شد! ✓' : 'Copied! ✓';
+        setTimeout(() => {
+          textSpan.textContent = orig;
+        }, 2500);
+      });
+    }
+
+    // Initialize from Preferences
+    window.addEventListener('DOMContentLoaded', () => {
+      const savedTheme = localStorage.getItem('preferred_theme');
+      if (savedTheme) {
+        setTheme(savedTheme === 'dark');
+      } else {
+        setTheme(true); // default dark
+      }
+
+      const savedLang = localStorage.getItem('preferred_lang') || 'en';
+      setLanguage(savedLang);
+    });
+  </script>
+
+  <!-- Schema.org Rich Snippet for Career & SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Seyed Shahabeddin Hosseini Bay",
+    "alternateName": ["Shahab Hosseini Bay", "سید شهاب الدین حسینی بای"],
+    "jobTitle": "Software Engineer & Systems Architect",
+    "url": "https://shahab-hb.ir",
+    "email": "Shahabhosseinibay@gmail.com",
+    "sameAs": [
+      "https://github.com/Bekend"
+    ],
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Golestan University"
+    },
+    "knowsAbout": [
+      "Python",
+      "WordPress Plugin Development",
+      "VMware ESXi",
+      "Godot Engine",
+      "Tailscale",
+      "System Virtualization",
+      "Applied AI & Quantized LLMs",
+      "Clinical Audio Processing"
+    ]
+  }
+  </script>
+
+</body>
+</html>
