@@ -215,7 +215,7 @@
         overflow: hidden !important;
         box-sizing: border-box !important;
         margin: 0 !important;
-        padding: 4mm 6.5mm !important; /* Compact 1-page fit */
+        padding: 5mm 7.5mm !important; /* Fills full A4 page cleanly */
         font-feature-settings: normal !important;
         -webkit-font-feature-settings: normal !important;
       }
@@ -390,7 +390,17 @@
         <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-zinc-200 dark:divide-zinc-800 rtl:sm:divide-x-reverse">
           <div class="p-3">
             <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_phone_label">شماره موبایل</span>
-            <a href="tel:09999149216" class="font-mono font-medium text-zinc-800 dark:text-zinc-200 hover:underline" dir="ltr"><bdi>09999149216</bdi></a>
+            <a href="tel:09999149216" class="font-mono font-bold text-zinc-900 dark:text-white hover:underline block text-sm" dir="ltr"><bdi>09999149216</bdi></a>
+            <div class="flex items-center gap-1.5 mt-2 flex-wrap">
+              <a href="https://wa.me/989999149216" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-sans font-medium bg-emerald-50 dark:bg-emerald-950/40 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800/60 hover:bg-emerald-100 dark:hover:bg-emerald-900/50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                <span data-i18n="contact_wa">واتساپ</span>
+              </a>
+              <a href="https://t.me/+989999149216" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-sans font-medium bg-sky-50 dark:bg-sky-950/40 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800/60 hover:bg-sky-100 dark:hover:bg-sky-900/50 transition-colors">
+                <span class="w-1.5 h-1.5 rounded-full bg-sky-500 shrink-0"></span>
+                <span data-i18n="contact_tg">تلگرام</span>
+              </a>
+            </div>
           </div>
           <div class="p-3">
             <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_contact_label">ایمیل و گیت‌هاب</span>
@@ -1015,18 +1025,32 @@
     </section>
 
     <!-- Footer -->
-    <footer class="pt-8 border-t border-zinc-200 dark:border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500">
-      <div class="flex items-center gap-2">
-        <span data-i18n="name">سید شهاب‌الدین حسینی بای</span> • <span class="font-mono">shahabhb.ir</span>
-      </div>
-      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-        <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md text-xs font-medium bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-900 dark:text-zinc-100 transition-colors no-print">
+    <footer class="pt-8 pb-6 border-t border-zinc-200 dark:border-zinc-800/80 text-xs text-zinc-500 space-y-3">
+      <!-- Row 1: Actions & Links -->
+      <div class="flex flex-wrap items-center justify-between gap-3">
+        <div class="flex flex-wrap items-center gap-x-3 gap-y-1 font-sans">
+          <a href="https://github.com/Bekend" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 dark:hover:text-white transition-colors" data-i18n="footer_github">گیت‌هاب</a>
+          <span class="text-zinc-300 dark:text-zinc-700">•</span>
+          <a href="mailto:shahabhosseinibay@gmail.com" class="hover:text-zinc-900 dark:hover:text-white transition-colors font-mono">shahabhosseinibay@gmail.com</a>
+          <span class="text-zinc-300 dark:text-zinc-700">•</span>
+          <a href="tel:09999149216" class="hover:text-zinc-900 dark:hover:text-white transition-colors font-mono" dir="ltr"><bdi>09999149216</bdi></a>
+        </div>
+        <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium bg-zinc-200 hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700 text-zinc-900 dark:text-zinc-100 transition-colors no-print">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
           <span data-i18n="btn_print">پرینت رزومه</span>
         </button>
-        <a href="mailto:shahabhosseinibay@gmail.com" class="hover:text-zinc-900 dark:hover:text-white transition-colors font-mono">shahabhosseinibay@gmail.com</a>
-        <a href="https://github.com/Bekend" target="_blank" rel="noopener noreferrer" class="hover:text-zinc-900 dark:hover:text-white transition-colors" data-i18n="footer_github">گیت‌هاب</a>
-        <a href="tel:09999149216" class="hover:text-zinc-900 dark:hover:text-white transition-colors font-mono">09999149216</a>
+      </div>
+
+      <!-- Row 2: Identity & Copyright -->
+      <div class="flex items-center justify-between text-[11px] text-zinc-400 dark:text-zinc-500 pt-2 border-t border-zinc-100 dark:border-zinc-800/50">
+        <div class="flex items-center gap-2">
+          <span class="font-medium text-zinc-700 dark:text-zinc-300" data-i18n="name">سید شهاب‌الدین حسینی بای</span>
+          <span>•</span>
+          <span class="font-mono">shahabhb.ir</span>
+        </div>
+        <div class="font-mono text-[10px]">
+          <span>1405 / 2026</span>
+        </div>
       </div>
     </footer>
 
@@ -1037,59 +1061,59 @@
   <!-- ========================================== -->
   <div id="resumePrintView" class="cv-root font-sans text-[8.5px] leading-normal">
     <!-- Header Block -->
-    <div class="cv-header border-b cv-border pb-1 mb-1">
+    <div class="cv-header border-b cv-border pb-1.5 mb-1.5">
       <div class="flex items-center justify-between gap-3">
         <div>
-          <h1 class="text-lg font-black cv-title tracking-tight font-sans" data-i18n="name">سید شهاب‌الدین حسینی بای</h1>
-          <p class="text-[9.5px] font-semibold cv-accent mt-0.2 font-sans" data-i18n="headline">دانشجوی مهندسی کامپیوتر | توسعه نرم‌افزار، بک‌اند و سیستم‌ها</p>
+          <h1 class="text-xl font-black cv-title tracking-tight font-sans" data-i18n="name">سید شهاب‌الدین حسینی بای</h1>
+          <p class="text-[10px] font-semibold cv-accent mt-0.5 font-sans" data-i18n="headline">دانشجوی مهندسی کامپیوتر | توسعه نرم‌افزار، بک‌اند و سیستم‌ها</p>
         </div>
-        <div class="text-left font-mono text-[9px] cv-muted space-y-0.2" dir="ltr">
+        <div class="text-left font-mono text-[9px] cv-muted space-y-0.5" dir="ltr">
           <div><span class="font-bold cv-title">shahabhb.ir</span> 🌐</div>
           <div><span>github.com/Bekend</span> 💻</div>
         </div>
       </div>
 
       <!-- Contact & Meta Strip -->
-      <div class="mt-1 pt-1 border-t cv-border flex flex-wrap items-center justify-between gap-y-0.5 text-[8.5px] cv-muted">
-        <div class="flex flex-wrap items-center gap-x-3 gap-y-0.5 font-sans">
+      <div class="mt-1.5 pt-1.5 border-t cv-border flex flex-wrap items-center justify-between gap-y-1 text-[8.5px] cv-muted">
+        <div class="flex flex-wrap items-center gap-x-3.5 gap-y-0.5 font-sans">
           <span>✉️ <span class="font-mono">shahabhosseinibay@gmail.com</span></span>
-          <span>📱 <span class="cv-title font-medium" data-i18n="cv_mobile_label">موبایل:</span> <bdi class="font-mono text-zinc-800 dark:text-zinc-200" dir="ltr">09999149216</bdi></span>
+          <span>📱 <span class="cv-title font-medium" data-i18n="cv_mobile_label">شماره موبایل:</span> <bdi class="font-mono text-zinc-800 dark:text-zinc-200" dir="ltr">09999149216</bdi></span>
           <span>📍 <span data-i18n="tbl_loc_val">گلستان (گرگان / گنبد)</span></span>
         </div>
         <div class="flex items-center gap-1.5 font-sans">
-          <span class="px-1.5 py-0.2 rounded cv-tag text-[8px]" data-i18n="tbl_military_val">معافیت دائم</span>
-          <span class="px-1.5 py-0.2 rounded cv-tag text-[8px]" data-i18n="tbl_age_val">متولد ۱۳۸۳</span>
-          <span class="px-1.5 py-0.2 rounded cv-tag text-[8px] text-emerald-500 font-semibold" data-i18n="status_pill">آماده همکاری</span>
+          <span class="px-2 py-0.5 rounded cv-tag text-[8px]" data-i18n="tbl_military_val">معافیت دائم</span>
+          <span class="px-2 py-0.5 rounded cv-tag text-[8px]" data-i18n="tbl_age_val">متولد ۱۳۸۳</span>
+          <span class="px-2 py-0.5 rounded cv-tag text-[8px] text-emerald-500 font-semibold" data-i18n="status_pill">آماده همکاری</span>
         </div>
       </div>
     </div>
 
     <!-- Executive Summary -->
-    <div class="mb-1 avoid-break">
-      <h2 class="text-[9.5px] font-sans font-bold cv-accent mb-0.5 flex items-center gap-1">
-        <span class="w-1 h-1 rounded-full bg-sky-500"></span>
+    <div class="mb-1.5 avoid-break">
+      <h2 class="text-[10px] font-sans font-bold cv-accent mb-0.5 flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
         <span data-i18n="cv_summary_title">خلاصه حرفه‌ای و پروفایل مهندسی</span>
       </h2>
-      <p class="text-[8px] leading-[1.3] cv-text text-justify font-sans" data-i18n="about_text">
+      <p class="text-[8.5px] leading-[1.38] cv-text text-justify font-sans" data-i18n="about_text">
         دانشجوی مهندسی کامپیوتر با تمرکز و تجربه عملی و اجرایی در پروژه‌های مستقل، پژوهشی و فریلنس. تسلط عملی بر توسعه اسکریپت‌ها و سرویس‌های بک‌اند، اتومیشن داده و وب اسکرپینگ با پایتون (<span dir="ltr">REST APIs</span>، بات‌ها و اسکرپینگ)، پیاده‌سازی پایپ‌لاین‌های هوش مصنوعی و پردازش گفتار (<span dir="ltr">Whisper</span> و <span dir="ltr">Pyannote</span>)، طراحی و توسعه افزونه‌های سبک و اختصاصی ووکامرس بدون وابستگی به پلاگین‌های تجاری سنگین، و راه‌اندازی و نگهداری سرورها و زیرساخت‌های لینوکسی (<span dir="ltr">ESXi</span>، داکر و رکمونت فیزیکی <span dir="ltr">HP</span>). به دنبال پیوستن به یک تیم فنی حرفه‌ای هستم تا علاوه بر به‌کارگیری مهارت‌های فعلی در بک‌اند، پایتون و زیرساخت، تجربه کار تیمی و استانداردهای توسعه سازمانی را نیز کسب کنم.
       </p>
     </div>
 
     <!-- Technical Skills Matrix (4 Clean Linear Categories) -->
-    <div class="mb-1 avoid-break">
-      <h2 class="text-[9.5px] font-sans font-bold cv-accent mb-0.5 flex items-center gap-1">
-        <span class="w-1 h-1 rounded-full bg-sky-500"></span>
+    <div class="mb-1.5 avoid-break">
+      <h2 class="text-[10px] font-sans font-bold cv-accent mb-0.5 flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
         <span data-i18n="cv_skills_title">مهارت‌های فنی و شایستگی‌های تخصصی</span>
       </h2>
-      <div class="grid grid-cols-2 gap-1.5 text-[8px] font-sans">
+      <div class="grid grid-cols-2 gap-1.5 text-[8.5px] font-sans">
         
         <!-- Category 1: Languages & Frameworks -->
-        <div class="cv-box rounded border p-1 space-y-0.5">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
           <div class="flex items-center justify-between font-bold cv-title">
             <span data-i18n="cv_cat_languages">زبان‌ها و فریم‌ورک‌ها</span>
             <span class="font-mono text-[7.5px] cv-accent" data-i18n="cv_cat_languages_en">Languages & Frameworks</span>
           </div>
-          <div class="space-y-0.2 cv-text text-[8px] leading-[1.25]">
+          <div class="space-y-0.5 cv-text text-[8.5px] leading-[1.35]">
             <div data-i18n="cv_sk_py">• <strong>Python:</strong> اسکریپت‌نویسی و اتومیشن | وب اسکرپینگ و استخراج داده (<span dir="ltr">BS4 / Requests</span>) | مفاهیم <span dir="ltr">Django</span> و <span dir="ltr">REST API</span></div>
             <div data-i18n="cv_sk_php">• <strong>PHP & WordPress:</strong> توسعه افزونه‌های اختصاصی سبک ووکامرس | کش <span dir="ltr">Transient</span> | هوک‌ها و فیلتر <span dir="ltr">Ajax</span></div>
             <div data-i18n="cv_sk_systems">• <strong>GDScript & Java:</strong> معماری سیستم‌های بازی در <span dir="ltr">Godot 4</span> | اپلیکیشن ضبط پس‌زمینه اندروید (<span dir="ltr">Java SDK</span>)</div>
@@ -1097,12 +1121,12 @@
         </div>
 
         <!-- Category 2: AI & Data Processing -->
-        <div class="cv-box rounded border p-1 space-y-0.5">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
           <div class="flex items-center justify-between font-bold cv-title">
             <span data-i18n="cv_cat_ai">هوش مصنوعی و پردازش داده</span>
             <span class="font-mono text-[7.5px] cv-accent" data-i18n="cv_cat_ai_en">AI, Speech & Data</span>
           </div>
-          <div class="space-y-0.2 cv-text text-[8px] leading-[1.25]">
+          <div class="space-y-0.5 cv-text text-[8.5px] leading-[1.35]">
             <div data-i18n="cv_sk_asr">• <strong>بازشناسی گفتار (Persian ASR):</strong> مدل‌های ترنسفورمر <span dir="ltr">Whisper Large-v3</span> با پرامپتینگ تخصصی واژگان بالینی</div>
             <div data-i18n="cv_sk_diarization">• <strong>دیارایزیشن عصبی:</strong> تفکیک نقش گویندگان و شناسایی همپوشانی صدا با <span dir="ltr">pyannote.audio</span></div>
             <div data-i18n="cv_sk_llm">• <strong>مدل‌های زبانی و اجرای محلی:</strong> بهینه‌سازی پرامپت | استقرار مدل‌های محلی با <span dir="ltr">Ollama</span> و کوانتیزاسیون <span dir="ltr">GGUF</span></div>
@@ -1110,12 +1134,12 @@
         </div>
 
         <!-- Category 3: Infrastructure, Network & DevOps -->
-        <div class="cv-box rounded border p-1 space-y-0.5">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
           <div class="flex items-center justify-between font-bold cv-title">
             <span data-i18n="cv_cat_infra">زیرساخت، شبکه و DevOps</span>
             <span class="font-mono text-[7.5px] cv-accent" data-i18n="cv_cat_infra_en">Infrastructure & DevOps</span>
           </div>
-          <div class="space-y-0.2 cv-text text-[8px] leading-[1.25]">
+          <div class="space-y-0.5 cv-text text-[8.5px] leading-[1.35]">
             <div data-i18n="cv_sk_linux">• <strong>لینوکس و وب‌سرور:</strong> لینوکس سرور (<span dir="ltr">Ubuntu</span>) | شل <span dir="ltr">Bash</span> | وب‌سرورهای <span dir="ltr">Nginx</span> (ریورس پراکسی) و <span dir="ltr">LiteSpeed</span></div>
             <div data-i18n="cv_sk_vm">• <strong>مجازی‌سازی و کانتینر:</strong> هایپروایزر <span dir="ltr">VMware ESXi 6.5</span> | کانتینرسازی سرویس‌ها با <span dir="ltr">Docker</span></div>
             <div data-i18n="cv_sk_hw">• <strong>سخت‌افزار سرور و شبکه:</strong> رکمونت فیزیکی <span dir="ltr">HP ProLiant DL360p Gen8</span> | سامانه <span dir="ltr">iLO 4</span> | آرایه‌های <span dir="ltr">RAID</span> | شبکه مش <span dir="ltr">Tailscale</span></div>
@@ -1123,12 +1147,12 @@
         </div>
 
         <!-- Category 4: Languages & Communication -->
-        <div class="cv-box rounded border p-1 space-y-0.5">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
           <div class="flex items-center justify-between font-bold cv-title">
             <span data-i18n="cv_cat_comm">زبان‌های خارجی و ارتباطی</span>
             <span class="font-mono text-[7.5px] cv-accent" data-i18n="cv_cat_comm_en">Languages & Communication</span>
           </div>
-          <div class="space-y-0.2 cv-text text-[8px] leading-[1.25]">
+          <div class="space-y-0.5 cv-text text-[8.5px] leading-[1.35]">
             <div data-i18n="cv_sk_en">• <strong>انگلیسی:</strong> مسلط به درک متون تخصصی، مطالعه داکیومنت‌های فنی و مستندسازی کد</div>
             <div data-i18n="cv_sk_de">• <strong>آلمانی:</strong> سطح پایه (<span dir="ltr">A1/A2</span>)</div>
             <div data-i18n="cv_sk_fa">• <strong>فارسی:</strong> زبان مادری</div>
@@ -1138,31 +1162,31 @@
     </div>
 
     <!-- Academic Research & PCCC Project -->
-    <div class="mb-1 avoid-break">
-      <h2 class="text-[9.5px] font-sans font-bold cv-accent mb-0.5 flex items-center justify-between">
-        <span class="flex items-center gap-1">
-          <span class="w-1 h-1 rounded-full bg-sky-500"></span>
+    <div class="mb-1.5 avoid-break">
+      <h2 class="text-[10px] font-sans font-bold cv-accent mb-0.5 flex items-center justify-between">
+        <span class="flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
           <span data-i18n="sec_research_title">پروژه دانشگاهی و پژوهش علمی</span>
         </span>
-        <span class="font-sans text-[8px] cv-tag px-1.5 py-0.2 rounded font-medium" data-i18n="pccc_badge">ارائه شفاهی (Oral Presentation) • نمایه ISC</span>
+        <span class="font-sans text-[8px] cv-tag px-2 py-0.5 rounded font-medium" data-i18n="pccc_badge">ارائه شفاهی (Oral Presentation) • نمایه ISC</span>
       </h2>
 
-      <div class="cv-box rounded border p-1.5 space-y-0.5 font-sans">
+      <div class="cv-box rounded border p-2 space-y-1 font-sans">
         <div>
-          <h3 class="font-bold cv-title text-[9.5px]" data-i18n="pccc_title">PCCC: پیکره صوتی-متنی مکالمات طبیعی پزشک و بیمار به زبان فارسی</h3>
-          <p class="text-[8px] cv-accent font-medium" data-i18n="pccc_subtitle">اولین مجموعه داده طبیعی مکالمات بالینی در ایران و خط لوله جامع هوش مصنوعی گفتار و متن</p>
+          <h3 class="font-bold cv-title text-[10px]" data-i18n="pccc_title">PCCC: پیکره صوتی-متنی مکالمات طبیعی پزشک و بیمار به زبان فارسی</h3>
+          <p class="text-[8.5px] cv-accent font-medium mt-0.2" data-i18n="pccc_subtitle">اولین مجموعه داده طبیعی مکالمات بالینی در ایران و خط لوله جامع هوش مصنوعی گفتار و متن</p>
         </div>
 
-        <div class="text-[8px] leading-[1.25] cv-text text-justify space-y-0.5" data-i18n="pccc_desc">
+        <div class="text-[8.5px] leading-[1.35] cv-text text-justify space-y-0.5" data-i18n="pccc_desc">
           <p>پروژه پژوهشی و دیتاست بالینی ثبت‌شده در ۲۹ جلسه کاری مداوم (بیش از ۱۴۲ ساعت صوت طبیعی، ۴۲۳,۰۰۰ کلمه و ۲۷,۰۰۰ نوبت مکالمه) در مطب‌های بالینی جهت آموزش مدل‌های هوش مصنوعی اسناد پزشکی (<span dir="ltr">Ambient Clinical AI</span>):</p>
-          <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
             <li>طراحی و ساخت نرم‌افزار اختصاصی اندروید (<span dir="ltr">Java SDK</span>) برای ضبط پیوسته و هوشمند صدای محیط با تله‌متری آنلاین وضعیت از طریق بازوی بله.</li>
             <li>پیاده‌سازی خط لوله اند-تو-اند پردازش گفتار شامل رونویسی با <span dir="ltr">Whisper Large-v3</span>، تفکیک عصبی گویندگان با <span dir="ltr">pyannote.audio</span> و پالایش بالینی متون با <span dir="ltr">Gemini 3.5 Flash</span>.</li>
             <li>پذیرش و ارائه مقاله به صورت ارائه شفاهی (<span dir="ltr">Oral Presentation</span>) در نخستین کنفرانس ملی هوش مصنوعی و زیست هوشمند (<span dir="ltr">BioIntelligence 2026</span>) دانشگاه شهید بهشتی و نمایه در <span dir="ltr">ISC</span>.</li>
           </ul>
         </div>
 
-        <div class="pt-0.5 border-t cv-border flex flex-wrap items-center justify-between text-[7.5px] font-sans">
+        <div class="pt-1 border-t cv-border flex flex-wrap items-center justify-between text-[8px] font-sans">
           <span class="cv-muted" data-i18n="cv_pccc_links_label">لینک‌های دسترسی در گیت‌هاب:</span>
           <div class="flex items-center gap-1.5 font-mono">
             <a href="https://github.com/Bekend/medical-dataset" class="cv-accent hover:underline font-sans" data-i18n="cv_pccc_link_repo">مخزن اصلی</a> •
@@ -1176,24 +1200,24 @@
     </div>
 
     <!-- Work Experience & Projects -->
-    <div class="mb-1">
-      <h2 class="text-[9.5px] font-sans font-bold cv-accent mb-0.5 flex items-center gap-1">
-        <span class="w-1 h-1 rounded-full bg-sky-500"></span>
+    <div class="mb-1.5">
+      <h2 class="text-[10px] font-sans font-bold cv-accent mb-0.5 flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
         <span data-i18n="sec_exp_title">سوابق کاری و پروژه‌های عملی</span>
       </h2>
 
-      <div class="space-y-0.8 font-sans">
+      <div class="space-y-1 font-sans">
         <!-- 1. Venorad -->
-        <div class="cv-box rounded border p-1 space-y-0.2">
-          <div class="flex items-center justify-between text-[9px]">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
+          <div class="flex items-center justify-between text-[9.5px]">
             <div class="flex items-center gap-1 flex-wrap">
               <span class="font-bold cv-title" data-i18n="job_venorad_title">طراحی، توسعه و اتومیشن فروشگاه اینترنتی ونوراد</span>
-              <span class="font-mono text-[7.5px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">venorad.ir</span>
+              <span class="font-mono text-[8px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">venorad.ir</span>
             </div>
-            <span class="text-[7.5px] cv-muted font-sans" data-i18n="job_venorad_date">آبان ۱۴۰۴ - اکنون (فریلنس و توسعه مداوم)</span>
+            <span class="text-[8px] cv-muted font-sans" data-i18n="job_venorad_date">مرداد ۱۴۰۵ - اکنون (در حال توسعه)</span>
           </div>
-          <div class="text-[8px] leading-[1.25] cv-text text-justify" data-i18n="job_venorad_desc">
-            <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <div class="text-[8.5px] leading-[1.35] cv-text text-justify" data-i18n="job_venorad_desc">
+            <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
               <li>توسعه اختصاصی افزونه آکوردهای نت عطر و افزونه فیلتر ایجکس بدون استفاده از پلاگین‌های تجاری سنگین جهت حداکثر سبکی.</li>
               <li>اتومیشن استخراج و ورود بیش از ۲,۵۰۰ کاتالوگ محصول با پایتون و بهینه‌سازی فرمت تصاویر با <span dir="ltr">WebP</span>.</li>
             </ul>
@@ -1201,16 +1225,16 @@
         </div>
 
         <!-- 2. Godot Game -->
-        <div class="cv-box rounded border p-1 space-y-0.2">
-          <div class="flex items-center justify-between text-[9px]">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
+          <div class="flex items-center justify-between text-[9.5px]">
             <div class="flex items-center gap-1 flex-wrap">
               <span class="font-bold cv-title" data-i18n="job_godot_title">توسعه بازی استراتژی نوبتی ۴X با موتور Godot 4</span>
-              <span class="font-mono text-[7.5px] cv-muted">GDScript • Procedural Generation</span>
+              <span class="font-mono text-[8px] cv-muted">GDScript • Procedural Generation</span>
             </div>
-            <span class="text-[7.5px] cv-muted font-sans" data-i18n="job_godot_date">تیر ۱۴۰۵ - اکنون (در حال توسعه)</span>
+            <span class="text-[8px] cv-muted font-sans" data-i18n="job_godot_date">تیر ۱۴۰۵ - اکنون (در حال توسعه)</span>
           </div>
-          <div class="text-[8px] leading-[1.25] cv-text text-justify" data-i18n="job_godot_desc">
-            <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <div class="text-[8.5px] leading-[1.35] cv-text text-justify" data-i18n="job_godot_desc">
+            <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
               <li>طراحی معماری ماژولار بازی استراتژی نوبتی ۴X با زبان <span dir="ltr">GDScript</span> در موتور بازی‌سازی <span dir="ltr">Godot 4</span>.</li>
               <li>پیاده‌سازی سیستم تولید رویه‌ای نقشه (<span dir="ltr">Procedural Generation</span>)، درخت ارتقای تکنولوژی و هوش مصنوعی حریفان.</li>
             </ul>
@@ -1218,16 +1242,16 @@
         </div>
 
         <!-- 3. Bots & WebIDM -->
-        <div class="cv-box rounded border p-1 space-y-0.2">
-          <div class="flex items-center justify-between text-[9px]">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
+          <div class="flex items-center justify-between text-[9.5px]">
             <div class="flex items-center gap-1 flex-wrap">
               <span class="font-bold cv-title" data-i18n="job_bots_title">طراحی ربات‌های تلگرام و اتومیشن اسکرپینگ</span>
-              <span class="font-mono text-[7.5px] cv-muted">Python • Automation • WebIDM</span>
+              <span class="font-mono text-[8px] cv-muted">Python • Automation • WebIDM</span>
             </div>
-            <span class="text-[7.5px] cv-muted font-sans" data-i18n="job_bots_date">دی ۱۴۰۳ - اکنون (فریلنس و پروژه‌ای)</span>
+            <span class="text-[8px] cv-muted font-sans" data-i18n="job_bots_date">دی ۱۴۰۳ - اکنون (فریلنس و پروژه‌ای)</span>
           </div>
-          <div class="text-[8px] leading-[1.25] cv-text text-justify" data-i18n="job_bots_desc">
-            <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <div class="text-[8.5px] leading-[1.35] cv-text text-justify" data-i18n="job_bots_desc">
+            <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
               <li>ساخت اسکرپرهای خودکار پایتون جهت پایش مداوم آگهی‌های دیوار و شیپور با هشدار لحظه‌ای در تلگرام.</li>
               <li>معماری و توسعه سیستم مدیریت دانلود شخصی چندنخی ناهمگام <span dir="ltr">WebIDM</span> در پایتون با قابلیت کنترل از طریق تلگرام.</li>
             </ul>
@@ -1235,16 +1259,16 @@
         </div>
 
         <!-- 4. Alpha Funded Trader -->
-        <div class="cv-box rounded border p-1 space-y-0.2">
-          <div class="flex items-center justify-between text-[9px]">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
+          <div class="flex items-center justify-between text-[9.5px]">
             <div class="flex items-center gap-1 flex-wrap">
               <span class="font-bold cv-title" data-i18n="job_alpha_title">بازطراحی و بهینه‌سازی وبسایت پراپ فرم</span>
-              <span class="font-mono text-[7.5px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">alphafundedtrader.com</span>
+              <span class="font-mono text-[8px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">alphafundedtrader.com</span>
             </div>
-            <span class="text-[7.5px] cv-muted font-sans" data-i18n="job_alpha_date">مرداد ۱۴۰۲ تا آذر ۱۴۰۲</span>
+            <span class="text-[8px] cv-muted font-sans" data-i18n="job_alpha_date">مرداد ۱۴۰۲ تا آذر ۱۴۰۲</span>
           </div>
-          <div class="text-[8px] leading-[1.25] cv-text text-justify" data-i18n="job_alpha_desc">
-            <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <div class="text-[8.5px] leading-[1.35] cv-text text-justify" data-i18n="job_alpha_desc">
+            <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
               <li>بازطراحی ساختار ظاهری و رابط کاربری (<span dir="ltr">UI</span>) وبسایت در هماهنگی با نیازهای پلتفرم معاملاتی.</li>
               <li>رفع ایرادات فنی فرانت‌اند و بهبود سرعت بارگذاری صفحات جهت ارتقای تجربه کاربری (<span dir="ltr">UX</span>) معامله‌گران.</li>
             </ul>
@@ -1252,16 +1276,16 @@
         </div>
 
         <!-- 5. RG1 Store -->
-        <div class="cv-box rounded border p-1 space-y-0.2">
-          <div class="flex items-center justify-between text-[9px]">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
+          <div class="flex items-center justify-between text-[9.5px]">
             <div class="flex items-center gap-1 flex-wrap">
               <span class="font-bold cv-title" data-i18n="job_rg1_title">طراحی و مدیریت وبسایت فروشگاهی بازی‌های رایانه‌ای</span>
-              <span class="font-mono text-[7.5px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">rg1.ir</span>
+              <span class="font-mono text-[8px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">rg1.ir</span>
             </div>
-            <span class="text-[7.5px] cv-muted font-sans" data-i18n="job_rg1_date">مهر ۱۳۹۹ تا بهمن ۱۳۹۹</span>
+            <span class="text-[8px] cv-muted font-sans" data-i18n="job_rg1_date">مهر ۱۳۹۹ تا بهمن ۱۳۹۹</span>
           </div>
-          <div class="text-[8px] leading-[1.25] cv-text text-justify" data-i18n="job_rg1_desc">
-            <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <div class="text-[8.5px] leading-[1.35] cv-text text-justify" data-i18n="job_rg1_desc">
+            <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
               <li>راه‌اندازی کامل فروشگاه اینترنتی ووکامرس برای عرضه سخت‌افزار کامپیوتر و لایسنس بازی‌های اورجینال (استیم و یوپلی).</li>
               <li>پیکربندی درگاه‌های پرداخت شتاب، سئو تکنیکال مقدماتی و مدیریت فرآیند تحویل سفارشات دیجیتال.</li>
             </ul>
@@ -1269,16 +1293,16 @@
         </div>
 
         <!-- 6. TPrime / PSNPlus -->
-        <div class="cv-box rounded border p-1 space-y-0.2">
-          <div class="flex items-center justify-between text-[9px]">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
+          <div class="flex items-center justify-between text-[9.5px]">
             <div class="flex items-center gap-1 flex-wrap">
               <span class="font-bold cv-title" data-i18n="job_tprime_title">طراحی وبسایت فروشگاهی اکانت توییچ پرایم و اشتراک‌ها</span>
-              <span class="font-mono text-[7.5px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">tprime / psnplus.ir</span>
+              <span class="font-mono text-[8px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">tprime / psnplus.ir</span>
             </div>
-            <span class="text-[7.5px] cv-muted font-sans" data-i18n="job_tprime_date">اردیبهشت ۱۳۹۹ تا مرداد ۱۳۹۹</span>
+            <span class="text-[8px] cv-muted font-sans" data-i18n="job_tprime_date">اردیبهشت ۱۳۹۹ تا مرداد ۱۳۹۹</span>
           </div>
-          <div class="text-[8px] leading-[1.25] cv-text text-justify" data-i18n="job_tprime_desc">
-            <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <div class="text-[8.5px] leading-[1.35] cv-text text-justify" data-i18n="job_tprime_desc">
+            <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
               <li>طراحی لندینگ تک‌صفحه‌ای اختصاصی با وردپرس جهت ارائه سریع اشتراک‌های دیجیتال و خدمات بازی‌های آنلاین.</li>
               <li>بهینه‌سازی فرم‌ها و فرآیند ثبت و پیگیری آنی سفارشات مشتریان.</li>
             </ul>
@@ -1286,16 +1310,16 @@
         </div>
 
         <!-- 7. RexMovie -->
-        <div class="cv-box rounded border p-1 space-y-0.2">
-          <div class="flex items-center justify-between text-[9px]">
+        <div class="cv-box rounded border p-1.5 space-y-0.5">
+          <div class="flex items-center justify-between text-[9.5px]">
             <div class="flex items-center gap-1 flex-wrap">
               <span class="font-bold cv-title" data-i18n="job_rex_title">طراحی و مدیریت وبسایت دانلود فیلم و سریال</span>
-              <span class="font-mono text-[7.5px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">rexmovie.ir</span>
+              <span class="font-mono text-[8px] cv-accent border border-sky-500/20 px-1 py-0.2 rounded" dir="ltr">rexmovie.ir</span>
             </div>
-            <span class="text-[7.5px] cv-muted font-sans" data-i18n="job_rex_date">شهریور ۱۳۹۸ تا بهمن ۱۳۹۸</span>
+            <span class="text-[8px] cv-muted font-sans" data-i18n="job_rex_date">شهریور ۱۳۹۸ تا بهمن ۱۳۹۸</span>
           </div>
-          <div class="text-[8px] leading-[1.25] cv-text text-justify" data-i18n="job_rex_desc">
-            <ul class="list-disc rtl:pr-3 ltr:pl-3 space-y-0.2">
+          <div class="text-[8.5px] leading-[1.35] cv-text text-justify" data-i18n="job_rex_desc">
+            <ul class="list-disc rtl:pr-3.5 ltr:pl-3.5 space-y-0.5">
               <li>توسعه پرتال رسانه‌ای دانلود فیلم و سریال از پایه و پیکربندی سرورهای ذخیره‌سازی داده.</li>
               <li>مدیریت تیم تولید محتوا و بهینه‌سازی فنی ساختار لینک‌ها و پایگاه داده وردپرس.</li>
             </ul>
@@ -1305,22 +1329,22 @@
     </div>
 
     <!-- Education & Verification -->
-    <div class="avoid-break grid grid-cols-2 gap-1.5 pt-0.5 font-sans">
+    <div class="avoid-break grid grid-cols-2 gap-2 pt-0.5 font-sans">
       <!-- Education -->
-      <div class="cv-box rounded border p-1 space-y-0.5">
-        <h2 class="text-[9px] font-sans font-bold cv-accent mb-0.2" data-i18n="sec_edu_title">سوابق تحصیلی</h2>
+      <div class="cv-box rounded border p-1.5 space-y-1">
+        <h2 class="text-[10px] font-sans font-bold cv-accent mb-0.5" data-i18n="sec_edu_title">سوابق تحصیلی</h2>
         <div>
-          <div class="font-bold cv-title text-[9.5px]" data-i18n="edu_title">کارشناسی مهندسی کامپیوتر (نرم‌افزار)</div>
-          <div class="text-[8px] cv-muted" data-i18n="edu_place">دانشگاه گلستان • ورودی ۱۴۰۱ (ترم ۹)</div>
+          <div class="font-bold cv-title text-[10px]" data-i18n="edu_title">کارشناسی مهندسی کامپیوتر (نرم‌افزار)</div>
+          <div class="text-[8.5px] cv-muted" data-i18n="edu_place">دانشگاه گلستان • ورودی ۱۴۰۱ (ترم ۹)</div>
         </div>
-        <div class="pt-0.5 border-t cv-border">
-          <div class="font-bold cv-title text-[9px]" data-i18n="edu_highschool_title">دیپلم ریاضی و فیزیک</div>
-          <div class="text-[8px] cv-muted" data-i18n="edu_highschool_place">دبیرستان نمونه دولتی بقیه‌الله (گنبد کاووس) • ۱۳۹۸ تا ۱۴۰۱</div>
+        <div class="pt-1 border-t cv-border">
+          <div class="font-bold cv-title text-[9.5px]" data-i18n="edu_highschool_title">دیپلم ریاضی و فیزیک</div>
+          <div class="text-[8.5px] cv-muted" data-i18n="edu_highschool_place">دبیرستان نمونه دولتی بقیه‌الله (گنبد کاووس) • ۱۳۹۸ تا ۱۴۰۱</div>
         </div>
       </div>
 
       <!-- Links -->
-      <div class="cv-box rounded border p-1 text-[8px] space-y-0.2">
+      <div class="cv-box rounded border p-1.5 text-[8.5px] space-y-0.5">
         <div class="font-bold cv-title" data-i18n="cv_verify_title">تأییدیه و دسترسی به سورس‌کدها و پورتفولیو:</div>
         <div class="flex items-center justify-between cv-muted">
           <span data-i18n="cv_verify_domain_label">دامنه رسمی رزومه:</span>
@@ -1358,10 +1382,10 @@
         "tbl_military_val": "معافیت دائم",
         "tbl_age_label": "سن / وضعیت",
         "tbl_age_val": "متولد ۱۳۸۳",
-        "tbl_phone_label": "موبایل",
+        "tbl_phone_label": "شماره موبایل",
         "cv_summary_title": "خلاصه حرفه‌ای و پروفایل مهندسی",
         "cv_skills_title": "مهارت‌های فنی و شایستگی‌های تخصصی",
-        "cv_mobile_label": "موبایل:",
+        "cv_mobile_label": "شماره موبایل:",
         "cv_cat_languages": "زبان‌ها و فریم‌ورک‌ها",
         "cv_cat_languages_en": "Languages & Frameworks",
         "cv_cat_ai": "هوش مصنوعی و پردازش داده",
@@ -1463,7 +1487,7 @@
         "cv_pccc_link_poster": "پوستر",
         "sec_exp_title": "سوابق کاری و پروژه‌های عملی",
         "job_venorad_title": "طراحی، توسعه و اتومیشن فروشگاه اینترنتی ونوراد",
-        "job_venorad_date": "آبان ۱۴۰۴ - اکنون (فریلنس و توسعه مداوم)",
+        "job_venorad_date": "مرداد ۱۴۰۵ - اکنون (در حال توسعه)",
         "job_venorad_desc": "<ul class=\"list-disc rtl:pr-3 ltr:pl-3 space-y-0.2\"><li>توسعه اختصاصی افزونه آکوردهای نت عطر و افزونه فیلتر ایجکس بدون استفاده از پلاگین‌های تجاری سنگین جهت حداکثر سبکی.</li><li>اتومیشن استخراج و ورود بیش از ۲,۵۰۰ کاتالوگ محصول با پایتون و بهینه‌سازی فرمت تصاویر با <span dir=\"ltr\">WebP</span>.</li></ul>",
         "job_venorad_link": "venorad.ir (سایت فعال)",
         "job_venorad_chords_repo": "ریپوزیتوری افزونه آکوردها",
@@ -1501,7 +1525,9 @@
         "cv_verify_title": "تأییدیه و دسترسی به سورس‌کدها و پورتفولیو:",
         "cv_verify_domain_label": "دامنه رسمی رزومه:",
         "cv_verify_github_label": "مخازن و کدها در گیت‌هاب:",
-        "footer_github": "گیت‌هاب"
+        "footer_github": "گیت‌هاب",
+        "contact_wa": "واتساپ",
+        "contact_tg": "تلگرام"
 },
       en: {
         "page_title": "Seyed Shahabeddin Hosseini Bay | Resume & Portfolio",
@@ -1525,10 +1551,10 @@
         "tbl_military_val": "Permanent Exemption",
         "tbl_age_label": "Birth / Age",
         "tbl_age_val": "Born 2004",
-        "tbl_phone_label": "Mobile",
+        "tbl_phone_label": "Mobile Number",
         "cv_summary_title": "Executive Summary & Engineering Profile",
         "cv_skills_title": "Technical Skills & Core Competencies",
-        "cv_mobile_label": "Mobile:",
+        "cv_mobile_label": "Mobile Number:",
         "cv_cat_languages": "Languages & Frameworks",
         "cv_cat_languages_en": "Languages & Frameworks",
         "cv_cat_ai": "AI & Data Processing",
@@ -1630,7 +1656,7 @@
         "cv_pccc_link_poster": "Poster",
         "sec_exp_title": "Work Experience & Practical Projects",
         "job_venorad_title": "E-Commerce Architecture, Development & Automation - Venorad",
-        "job_venorad_date": "Nov 2025 - Present (Freelance & Active Dev)",
+        "job_venorad_date": "Aug 2026 - Present (In Active Dev)",
         "job_venorad_desc": "<ul class=\"list-disc rtl:pr-3 ltr:pl-3 space-y-0.2\"><li>Custom plugin development: perfume fragrance chord visualizer and instant Ajax filter without bloated commercial plugins for optimal speed.</li><li>Automated scraping and ingestion of 2,500+ perfume catalog items using Python and WebP image optimization.</li></ul>",
         "job_venorad_link": "venorad.ir (Active Site)",
         "job_venorad_chords_repo": "Chords Plugin Repository",
@@ -1668,7 +1694,9 @@
         "cv_verify_title": "Verification & Source Code Access:",
         "cv_verify_domain_label": "Official Resume Domain:",
         "cv_verify_github_label": "Repositories & Code on GitHub:",
-        "footer_github": "GitHub"
+        "footer_github": "GitHub",
+        "contact_wa": "WhatsApp",
+        "contact_tg": "Telegram"
 }
     };
 
