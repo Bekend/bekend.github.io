@@ -92,37 +92,53 @@
       color: #d4d4d8;
     }
 
-    /* Light Theme */
+    /* Light Theme (High-Contrast Professional Palette) */
     html:not(.dark) .cv-root {
       background-color: #ffffff;
-      color: #1e293b;
+      color: #0f172a;
     }
     html:not(.dark) .cv-header {
-      border-color: #e2e8f0;
+      border-color: #94a3b8;
     }
     html:not(.dark) .cv-box {
       background-color: #f8fafc;
-      border-color: #e2e8f0;
+      border-color: #cbd5e1;
     }
     html:not(.dark) .cv-title {
       color: #0f172a;
     }
     html:not(.dark) .cv-accent {
-      color: #0284c7;
+      color: #0369a1;
     }
     html:not(.dark) .cv-muted {
-      color: #64748b;
+      color: #475569;
     }
     html:not(.dark) .cv-border {
-      border-color: #e2e8f0;
+      border-color: #cbd5e1;
     }
     html:not(.dark) .cv-tag {
       background-color: #f1f5f9;
-      color: #334155;
+      color: #1e293b;
       border: 1px solid #cbd5e1;
+      font-weight: 500;
     }
     html:not(.dark) .cv-text {
-      color: #334155;
+      color: #1e293b;
+    }
+    html:not(.dark) #resumePrintView [dir="ltr"].border-sky-500\/20,
+    html:not(.dark) #resumePrintView span.border-sky-500\/20 {
+      background-color: #f0f9ff !important;
+      border-color: #7dd3fc !important;
+      color: #0369a1 !important;
+      font-weight: 600 !important;
+    }
+    html:not(.dark) #resumePrintView .text-emerald-500 {
+      color: #047857 !important;
+      background-color: #ecfdf5 !important;
+      border: 1px solid #a7f3d0 !important;
+    }
+    html:not(.dark) #resumePrintView .bg-sky-500 {
+      background-color: #0284c7 !important;
     }
 
     /* Dedicated Standalone PDF Print Rules (Full-Bleed, Zero White Borders) */
@@ -204,40 +220,59 @@
 
       html:not(.dark), html:not(.dark) body {
         background-color: #ffffff !important;
-        color: #1e293b !important;
+        color: #0f172a !important;
       }
       html:not(.dark) #resumePrintView {
         background-color: #ffffff !important;
-        color: #1e293b !important;
+        color: #0f172a !important;
+      }
+      html:not(.dark) #resumePrintView .cv-header {
+        border-color: #94a3b8 !important;
       }
       html:not(.dark) #resumePrintView .cv-box {
         background-color: #f8fafc !important;
-        border-color: #e2e8f0 !important;
+        border-color: #cbd5e1 !important;
       }
       html:not(.dark) #resumePrintView .cv-title {
         color: #0f172a !important;
       }
       html:not(.dark) #resumePrintView .cv-accent {
-        color: #0284c7 !important;
+        color: #0369a1 !important;
       }
       html:not(.dark) #resumePrintView .cv-muted {
-        color: #64748b !important;
+        color: #475569 !important;
       }
       html:not(.dark) #resumePrintView .cv-border {
-        border-color: #e2e8f0 !important;
+        border-color: #cbd5e1 !important;
       }
       html:not(.dark) #resumePrintView .cv-tag {
         background-color: #f1f5f9 !important;
-        color: #334155 !important;
+        color: #1e293b !important;
         border: 1px solid #cbd5e1 !important;
+        font-weight: 500 !important;
       }
       html:not(.dark) #resumePrintView .cv-text {
-        color: #334155 !important;
+        color: #1e293b !important;
+      }
+      html:not(.dark) #resumePrintView [dir="ltr"].border-sky-500\/20,
+      html:not(.dark) #resumePrintView span.border-sky-500\/20 {
+        background-color: #f0f9ff !important;
+        border-color: #7dd3fc !important;
+        color: #0369a1 !important;
+        font-weight: 600 !important;
+      }
+      html:not(.dark) #resumePrintView .text-emerald-500 {
+        color: #047857 !important;
+        background-color: #ecfdf5 !important;
+        border: 1px solid #a7f3d0 !important;
+      }
+      html:not(.dark) #resumePrintView .bg-sky-500 {
+        background-color: #0284c7 !important;
       }
     }
   </style>
 </head>
-<body class="bg-[#fafafa] text-zinc-800 dark:bg-[#0c0d11] dark:text-zinc-200 min-h-screen transition-colors duration-200">
+<body class="bg-[#f4f5f8] text-zinc-800 dark:bg-[#0c0d11] dark:text-zinc-200 min-h-screen transition-colors duration-200">
 
   <!-- Interactive Web Portfolio View -->
   <div id="webPortfolioView" class="max-w-3xl mx-auto px-5 sm:px-8 py-10 sm:py-16">
@@ -249,7 +284,7 @@
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
         </span>
-        <span class="text-xs font-medium text-zinc-600 dark:text-zinc-400" data-i18n="status_pill">آماده همکاری و استخدام</span>
+        <span class="text-xs font-semibold text-emerald-800 dark:text-emerald-400" data-i18n="status_pill">آماده همکاری و استخدام</span>
       </div>
 
       <div class="flex items-center gap-1.5 sm:gap-2">
@@ -284,35 +319,35 @@
       </div>
 
       <!-- Realistic, Grounded Intro: Interests & Collaboration Scope -->
-      <p class="text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="about_text">
+      <p class="text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="about_text">
         دانشجوی مهندسی کامپیوتر با تمرکز و تجربه عملی و اجرایی در پروژه‌های مستقل، پژوهشی و فریلنس. تسلط عملی بر توسعه اسکریپت‌ها و سرویس‌های بک‌اند، اتومیشن داده و وب اسکرپینگ با پایتون (REST APIs، بات‌ها و اسکرپینگ)، پیاده‌سازی پایپ‌لاین‌های هوش مصنوعی و پردازش گفتار (Whisper و Pyannote)، طراحی و توسعه افزونه‌های سبک و اختصاصی ووکامرس بدون وابستگی به پلاگین‌های تجاری سنگین، و راه‌اندازی و نگهداری سرورها و زیرساخت‌های لینوکسی (ESXi، داکر و رکمونت فیزیکی HP). به دنبال پیوستن به یک تیم فنی حرفه‌ای هستم تا علاوه بر به‌کارگیری مهارت‌های فعلی در بک‌اند، پایتون و زیرساخت، تجربه کار تیمی و استانداردهای توسعه سازمانی را نیز کسب کنم.
       </p>
     </section>
 
     <!-- Structured Profile Table -->
     <section class="mb-12">
-      <div class="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 overflow-hidden text-xs">
+      <div class="rounded-xl border border-zinc-200/90 dark:border-zinc-800 bg-white dark:bg-zinc-900/50 shadow-sm dark:shadow-none overflow-hidden text-xs">
         <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-zinc-200 dark:divide-zinc-800 rtl:sm:divide-x-reverse border-b border-zinc-200 dark:border-zinc-800">
           <div class="p-3">
-            <span class="text-zinc-400 block mb-0.5" data-i18n="tbl_age_label">سال تولد</span>
+            <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_age_label">سال تولد</span>
             <span class="font-semibold text-zinc-800 dark:text-zinc-200" data-i18n="tbl_age_val">متولد ۱۳۸۳</span>
           </div>
           <div class="p-3">
-            <span class="text-zinc-400 block mb-0.5" data-i18n="tbl_edu_label">آخرین وضعیت تحصیلی</span>
+            <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_edu_label">آخرین وضعیت تحصیلی</span>
             <span class="font-semibold text-zinc-800 dark:text-zinc-200" data-i18n="tbl_edu_val">دانشجوی کارشناسی مهندسی کامپیوتر (دانشگاه گلستان)</span>
           </div>
           <div class="p-3">
-            <span class="text-zinc-400 block mb-0.5" data-i18n="tbl_loc_label">محل سکونت</span>
+            <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_loc_label">محل سکونت</span>
             <span class="font-semibold text-zinc-800 dark:text-zinc-200" data-i18n="tbl_loc_val">گلستان (گرگان / گنبد)</span>
           </div>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-zinc-200 dark:divide-zinc-800 rtl:sm:divide-x-reverse">
           <div class="p-3">
-            <span class="text-zinc-400 block mb-0.5" data-i18n="tbl_phone_label">شماره موبایل</span>
+            <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_phone_label">شماره موبایل</span>
             <a href="tel:09999149216" class="font-mono font-medium text-zinc-800 dark:text-zinc-200 hover:underline" dir="ltr"><bdi>09999149216</bdi></a>
           </div>
           <div class="p-3">
-            <span class="text-zinc-400 block mb-0.5" data-i18n="tbl_contact_label">ایمیل و گیت‌هاب</span>
+            <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_contact_label">ایمیل و گیت‌هاب</span>
             <div class="space-y-0.5 font-mono text-[11px]">
               <div>
                 <a href="mailto:shahabhosseinibay@gmail.com" class="text-sky-600 dark:text-sky-400 hover:underline break-all">shahabhosseinibay@gmail.com</a>
@@ -323,7 +358,7 @@
             </div>
           </div>
           <div class="p-3">
-            <span class="text-zinc-400 block mb-0.5" data-i18n="tbl_military_label">وضعیت مشمولیت</span>
+            <span class="text-zinc-500 dark:text-zinc-400 block mb-0.5" data-i18n="tbl_military_label">وضعیت مشمولیت</span>
             <span class="font-semibold text-emerald-600 dark:text-emerald-400" data-i18n="tbl_military_val">معافیت دائم</span>
           </div>
         </div>
@@ -350,12 +385,12 @@
           </div>
 
           <!-- Description ALWAYS visible -->
-          <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_py_desc">
+          <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_py_desc">
             زبان اصلی در اکثر پروژه‌های من. تسلط بر کتابخانه‌های استاندارد، اتوماسیون داده و وظایف، وب اسکرپینگ داده‌ها (دیوار، شیپور، فراگرنتیکا)، ساخت ربات‌های تلگرام و پیام‌رسان بله، ساخت سیستم مدیریت دانلود شخصی (WebIDM) و خط لوله‌های آماده‌سازی داده‌ها. همچنین آشنایی مقدماتی با جنگو (Django) و توسعه وب‌سرویس‌های RESTful.
           </p>
 
           <!-- Accordion for Detailed Sliders -->
-          <details class="group/slider pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+          <details class="group/slider pt-2 border-t border-zinc-200 dark:border-zinc-800/80">
             <summary class="flex items-center justify-between cursor-pointer list-none select-none text-[11px] font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -365,65 +400,65 @@
             </summary>
             <div class="pt-3 space-y-2.5">
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_py_core">پایتون مقدماتی و پیشرفته (Core Python & Scripting):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">80%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 80%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_py_scraping">وب اسکرپینگ و استخراج داده (BeautifulSoup / Selenium):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">85%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 85%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_py_bots">توسعه ربات‌های تلگرام و پیام‌رسان بله (Telegram & Bale Bots):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">85%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 85%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_py_async">اتوماسیون وظایف، پردازش فایل و ساخت اسکریپت‌ها:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">75%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 75%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_py_webidm">معماری سیستم مدیریت دانلود WebIDM:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">80%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 80%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_py_pipeline">خط لوله‌های آماده‌سازی داده (Data Pipelines):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">75%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 75%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_py_django">فریم‌ورک جنگو (Django Framework - مقدماتی):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">35%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 35%"></div>
                 </div>
               </div>
@@ -436,15 +471,15 @@
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="font-bold text-zinc-900 dark:text-white text-sm">وردپرس و ووکامرس (WordPress & WooCommerce)</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300" data-i18n="sk_wp_level">توسعه افزونه، بهینه‌سازی و مدیریت</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60" data-i18n="sk_wp_level">توسعه افزونه، بهینه‌سازی و مدیریت</span>
             </div>
           </div>
 
-          <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_wp_desc">
+          <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_wp_desc">
             تجربه راه‌اندازی و مدیریت چند وبسایت فروشگاهی و دانلودی از پایه. کار با قالب‌های مختلف (به‌ویژه قالب WoodMart)، صفحه‌ساز المنتور، افزونه‌های بهینه‌سازی سرعت و کش مانند Hummingbird، اصول کشینگ و لیزی لودینگ، و سئو در حد مقدماتی. تجربه کدنویسی افزونه‌های سفارشی PHP برای ووکامرس (افزونه هرم نتهای بویایی، فیلتر ایجکس محصولات و وضعیت انبار سفارشی).
           </p>
 
-          <details class="group/slider pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+          <details class="group/slider pt-2 border-t border-zinc-200 dark:border-zinc-800/80">
             <summary class="flex items-center justify-between cursor-pointer list-none select-none text-[11px] font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -454,47 +489,47 @@
             </summary>
             <div class="pt-3 space-y-2.5">
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_wp_admin">راه‌اندازی و مدیریت فروشگاه ووکامرس (WooCommerce Admin):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">85%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 85%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_wp_theme">سفارشی‌سازی قالب و وودمارت (WoodMart & Elementor):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">80%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 80%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_wp_plugins">توسعه افزونه‌های سفارشی PHP برای ووکامرس (Custom Plugins):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">75%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 75%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_wp_speed">بهینه‌سازی سرعت، کش و لیزی‌لودینگ (Speed & Hummingbird):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">70%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 70%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_wp_seo">اصول سئو تکنیکال و محتوایی (Basic SEO):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">50%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 50%"></div>
                 </div>
               </div>
@@ -507,15 +542,15 @@
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="font-bold text-zinc-900 dark:text-white text-sm">شبکه، سرور و مجازی‌سازی (Infrastructure & Homelab)</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300" data-i18n="sk_infra_level">عملیاتی و پیاده‌سازی (Homelab)</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60" data-i18n="sk_infra_level">عملیاتی و پیاده‌سازی (Homelab)</span>
             </div>
           </div>
 
-          <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_infra_desc">
+          <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_infra_desc">
             راه‌اندازی، پیکربندی و نگهداری فیزیکی سرور رکمونت HP ProLiant DL360p Gen8 به عنوان هوم‌لب. کار با هایپروایزر VMware ESXi 6.5، Hyper-V و VMware Workstation؛ آشنایی با مفاهیم روتینگ، DMZ، پورت فورواردینگ، راه‌اندازی شبکه مش و تانلینگ با Tailscale، سیستم‌عامل‌های اوبونتو لینوکس و ویندوز سرور، و تجربه راه‌اندازی سرور روی کلودهای ایرانی (ابر آروان) و خارجی (هتزنر و دیجیتال‌اوشن).
           </p>
 
-          <details class="group/slider pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+          <details class="group/slider pt-2 border-t border-zinc-200 dark:border-zinc-800/80">
             <summary class="flex items-center justify-between cursor-pointer list-none select-none text-[11px] font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -525,56 +560,56 @@
             </summary>
             <div class="pt-3 space-y-2.5">
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_infra_vmware">هایپروایزر و مجازی‌سازی (VMware ESXi 6.5 & Hyper-V):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">70%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 70%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_infra_ubuntu">اوبونتو سرور و خط فرمان لینوکس (Ubuntu Server & Bash):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">70%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 70%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_infra_hw">پیکربندی سرور رکمونت فیزیکی HP ProLiant DL360p Gen8:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">65%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 65%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_infra_net">مفاهیم شبکه، روتینگ، پورت فورواردینگ و Tailscale Mesh:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">65%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 65%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_infra_win">ویندوز سرور و سرویس‌های پایه (Windows Server):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">65%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 65%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_infra_cloud">استقرار سرورهای ابری (Cloud VPS - Hetzner / ArvanCloud):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">60%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 60%"></div>
                 </div>
               </div>
@@ -587,15 +622,15 @@
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="font-bold text-zinc-900 dark:text-white text-sm">داکر، وب‌سرور و فرانت‌اند (Docker, Nginx, Web)</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300" data-i18n="sk_web_level">کاربردی و پروژه‌ای</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60" data-i18n="sk_web_level">کاربردی و پروژه‌ای</span>
             </div>
           </div>
 
-          <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_web_desc">
+          <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_web_desc">
             آشنایی و استفاده از Docker در سطح کاربردهای شخصی و تست سرویس‌ها؛ کار با وب‌سرور Nginx برای ریورس پراکسی؛ تسلط به HTML5 و CSS3 و بوت‌استرپ برای طراحی صفحات پروژه‌ها و گزارش‌های دانشگاهی.
           </p>
 
-          <details class="group/slider pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+          <details class="group/slider pt-2 border-t border-zinc-200 dark:border-zinc-800/80">
             <summary class="flex items-center justify-between cursor-pointer list-none select-none text-[11px] font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -605,38 +640,38 @@
             </summary>
             <div class="pt-3 space-y-2.5">
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_web_html">طراحی وب ریسپانسیو با HTML5 و CSS3:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">75%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 75%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_web_bootstrap">فریم‌ورک بوت‌استرپ (Bootstrap 5):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">70%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 70%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_web_nginx">وب‌سرور Nginx و پیکربندی ریورس پراکسی:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">55%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 55%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_web_docker">کانتینرسازی و استقرار با داکر (Docker):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">50%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 50%"></div>
                 </div>
               </div>
@@ -653,12 +688,12 @@
             </div>
           </div>
 
-          <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_android_desc">
+          <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_android_desc">
             <strong>جاوا و اندروید استودیو (سطح پایه/مبتدی):</strong> ساخت نرم‌افزار ضبط زمان‌بندی‌شده صدای محیط مطب در پس‌زمینه سیستم‌عامل برای پروژه PCCC با قابلیت ارسال وضعیت سلامت به بازوی بله. <br>
             <strong>موتور بازی‌سازی گودو (Godot 4):</strong> توسعه تجربی یک بازی استراتژی نوبتی ۴X با زبان GDScript شامل نقشه رویه‌ای تصادفی، درخت تکنولوژی و منطق هوش مصنوعی حریفان. (<a href="https://github.com/Bekend/modern-turn-based-strategy-game" target="_blank" rel="noopener noreferrer" class="text-sky-600 dark:text-sky-400 hover:underline">مشاهده ریپوزیتوری در گیت‌هاب</a>)
           </p>
 
-          <details class="group/slider pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+          <details class="group/slider pt-2 border-t border-zinc-200 dark:border-zinc-800/80">
             <summary class="flex items-center justify-between cursor-pointer list-none select-none text-[11px] font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -668,29 +703,29 @@
             </summary>
             <div class="pt-3 space-y-2.5">
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_game_godot">بازی‌سازی با گودو ۴ (Godot 4 & GDScript):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">70%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 70%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_game_proc">تولید رویه‌ای نقشه و منطق بازی استراتژی نوبتی ۴X:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">65%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 65%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_android_java">جاوا و توسعه اندروید (Java & Android SDK - سطح مقدماتی/سرویس پس‌زمینه):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">40%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 40%"></div>
                 </div>
               </div>
@@ -703,15 +738,15 @@
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="font-bold text-zinc-900 dark:text-white text-sm">جریان کاری با ابزارهای هوش مصنوعی (AI Workflow)</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300" data-i18n="sk_ai_level">ابزار اصلی توسعه</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60" data-i18n="sk_ai_level">ابزار اصلی توسعه</span>
             </div>
           </div>
 
-          <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_ai_desc">
+          <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_ai_desc">
             در فرآیند توسعه نرم‌افزار، به‌طور مداوم و حرفه‌ای از عامل هوش مصنوعی <strong>Antigravity</strong> به عنوان محیط و ابزار اصلی کدنویسی و معماری استفاده می‌کنم. همچنین تمرکز و مانور عملی ویژه‌ای بر اجرای مدل‌های محلی هوش مصنوعی (Local LLMs با Ollama و کوانتیزاسیون‌های GGUF)، و طراحی پایپ‌لاین‌های هوش مصنوعی گفتار (Whisper Large-v3 و pyannote) با پرامپتینگ ضدتوهم (Zero-Hallucination) دارم.
           </p>
 
-          <details class="group/slider pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+          <details class="group/slider pt-2 border-t border-zinc-200 dark:border-zinc-800/80">
             <summary class="flex items-center justify-between cursor-pointer list-none select-none text-[11px] font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -721,47 +756,47 @@
             </summary>
             <div class="pt-3 space-y-2.5">
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_ai_speech">پردازش صوت، بازشناسی گفتار و دیارایزیشن (Whisper Large-v3 & pyannote):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">80%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 80%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_ai_agent">عامل هوش مصنوعی دولوپر Antigravity (محیط و عامل اصلی توسعه):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">85%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 85%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_ai_local">اجرای مدل‌های محلی هوش مصنوعی (Local LLMs - Ollama & GGUF):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">85%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 85%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_ai_cloud">تست، ارزیابی و مهندسی پرامپت با ChatGPT و Claude:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">45%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 45%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_ai_pipelines">پایپ‌لاین‌های تلفیقی آماده‌سازی و استخراج داده با هوش مصنوعی:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">75%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 75%"></div>
                 </div>
               </div>
@@ -774,16 +809,16 @@
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div class="flex items-center gap-2">
               <span class="font-bold text-zinc-900 dark:text-white text-sm">سایر زبان‌ها و ابزارها</span>
-              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300" data-i18n="sk_other_level">سطوح مشخص</span>
+              <span class="px-2 py-0.5 rounded text-[11px] font-mono bg-zinc-100 dark:bg-zinc-800 text-zinc-800 dark:text-zinc-200 border border-zinc-200 dark:border-zinc-700/60" data-i18n="sk_other_level">سطوح مشخص</span>
             </div>
           </div>
 
-          <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_other_desc">
+          <p class="text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="sk_other_desc">
             <strong>زبان‌های خارجی:</strong> فارسی (زبان مادری)، انگلیسی (سطح خوب رو به بالا و روان)، آلمانی (سطح پایه و مقدماتی A1/A2). <br>
             <strong>سایر موارد:</strong> زبان Go (بسیار ابتدایی و در حد آشنایی اولیه)، زبان‌های #C و ++C (مقدماتی دانشگاهی)، کار با ادوبی فتوشاپ (سطح متوسط برای کارهای گرافیکی و وب)، و گوگل کولب (Google Colab) برای اجرای اسکریپت‌های داده.
           </p>
 
-          <details class="group/slider pt-2 border-t border-zinc-100 dark:border-zinc-800/80">
+          <details class="group/slider pt-2 border-t border-zinc-200 dark:border-zinc-800/80">
             <summary class="flex items-center justify-between cursor-pointer list-none select-none text-[11px] font-medium text-sky-600 dark:text-sky-400 hover:text-sky-500 transition-colors">
               <span class="flex items-center gap-1.5">
                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -793,56 +828,56 @@
             </summary>
             <div class="pt-3 space-y-2.5">
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_other_en">زبان انگلیسی (English - مطالعه روان متون تخصصی):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">80%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 80%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_other_colab">گوگل کولب برای اجرای اسکریپت‌های داده (Google Colab):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">60%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 60%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_other_ps">ادوبی فتوشاپ برای آماده‌سازی تصاویر وب (Photoshop):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">55%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 55%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_other_cpp">مبانی برنامه‌نویسی ++C و #C دانشگاهی:</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">35%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 35%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_other_de">زبان آلمانی (German - سطح پایه A1/A2):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">25%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 25%"></div>
                 </div>
               </div>
               <div class="space-y-1">
-                <div class="flex justify-between items-center text-[10px] text-zinc-600 dark:text-zinc-400">
+                <div class="flex justify-between items-center text-[10px] text-zinc-700 dark:text-zinc-400">
                   <span data-i18n="sk_other_go">زبان گو (Golang - سینتکس اولیه و آشنایی):</span>
                   <span class="font-mono font-bold text-sky-600 dark:text-sky-400">20%</span>
                 </div>
-                <div class="w-full h-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 overflow-hidden">
+                <div class="w-full h-1.5 rounded-full bg-zinc-200 dark:bg-zinc-800 overflow-hidden">
                   <div class="h-full rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" style="width: 20%"></div>
                 </div>
               </div>
@@ -862,7 +897,7 @@
       <div class="space-y-8">
 
         <!-- 1. Venorad -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-2">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="job_venorad_title">
               طراحی، توسعه و اتومیشن فروشگاه اینترنتی ونوراد
@@ -872,7 +907,7 @@
           <div class="text-xs font-medium text-sky-600 dark:text-sky-400 font-mono">
             <a href="https://venorad.ir" target="_blank" rel="noopener noreferrer" class="hover:underline">venorad.ir (سایت فعال)</a>
           </div>
-          <div class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_venorad_desc">
+          <div class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_venorad_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
               <li>حذف کامل وابستگی به افزونه‌های سنگین تجاری از طریق کدنویسی افزونه‌های سبک و اختصاصی ووکامرس (هرم بویایی عطر با Transient Cache، فیلتر آنی ایجکس محصولات و وضعیت‌های انبار سفارشی).</li>
               <li>طراحی و اجرای پایپ‌لاین خودکار پایتون جهت استخراج، پاکسازی، بهینه‌سازی فرمت تصاویر (WebP) و ورود دسته‌ای کاتالوگ بیش از ۲۵۰۰ محصول عطر.</li>
@@ -893,7 +928,7 @@
         </div>
 
         <!-- 2. Godot 4 4X Strategy Game -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-2">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="job_godot_title">
               توسعه بازی استراتژی نوبتی ۴X با موتور Godot 4
@@ -901,7 +936,7 @@
             <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400" data-i18n="job_godot_date">تیر ۱۴۰۵ - اکنون (در حال توسعه)</span>
           </div>
           <div class="text-xs text-zinc-500 font-mono">Godot 4 • GDScript • Procedural Generation</div>
-          <div class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_godot_desc">
+          <div class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_godot_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
               <li>طراحی و پیاده‌سازی معماری ماژولار بازی استراتژی نوبتی ۴X با زبان GDScript در موتور بازی‌سازی Godot 4.</li>
               <li>پیاده‌سازی سیستم تولید رویه‌ای نقشه (Procedural Biome Generation)، درخت ارتقای تکنولوژی و سیستم تصمیم‌گیری هوش مصنوعی حریفان.</li>
@@ -916,7 +951,7 @@
         </div>
 
         <!-- 3. Bots & Scraping -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-2">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="job_bots_title">
               طراحی ربات‌های تلگرام و اتومیشن اسکرپینگ
@@ -924,7 +959,7 @@
             <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400" data-i18n="job_bots_date">دی ۱۴۰۳ - اکنون (فریلنس و پروژه‌ای)</span>
           </div>
           <div class="text-xs text-zinc-500" data-i18n="job_bots_company">فریلنس • ایران، گنبد کاووس</div>
-          <div class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_bots_desc">
+          <div class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_bots_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
               <li>پیاده‌سازی اسکرپرهای خودکار با پایتون (BS4 / Requests) برای پایش مداوم آگهی‌های دیوار و شیپور با اعلان آنی در تلگرام.</li>
               <li>معماری و توسعه سیستم مدیریت دانلود شخصی WebIDM در پایتون با قابلیت مدیریت صف، زمان‌بندی و پایش از راه دور از طریق بات تلگرام.</li>
@@ -939,7 +974,7 @@
         </div>
 
         <!-- 3. Alpha Funded Trader -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-2">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="job_alpha_title">
               بازطراحی و بهینه‌سازی وبسایت پراپ فرم
@@ -947,7 +982,7 @@
             <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400" data-i18n="job_alpha_date">مرداد ۱۴۰۲ تا آذر ۱۴۰۲</span>
           </div>
           <div class="text-xs text-zinc-500 font-mono">alphafundedtrader.com</div>
-          <div class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_alpha_desc">
+          <div class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_alpha_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
               <li>بازطراحی ساختار بصری و رابط کاربری (UI) وبسایت در هماهنگی کامل با نیازهای پلتفرم معاملاتی و معامله‌گران.</li>
               <li>عیب‌یابی، رفع باگ‌های فنی و فرانت‌اند و بهینه‌سازی سرعت بارگذاری صفحات جهت بهبود تجربه کاربری (UX).</li>
@@ -956,7 +991,7 @@
         </div>
 
         <!-- 4. RG1 Game Store -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-2">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="job_rg1_title">
               طراحی و مدیریت وبسایت فروشگاهی بازی‌های رایانه‌ای
@@ -964,7 +999,7 @@
             <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400" data-i18n="job_rg1_date">مهر ۱۳۹۹ تا بهمن ۱۳۹۹</span>
           </div>
           <div class="text-xs text-zinc-500 font-mono">rg1.ir</div>
-          <div class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_rg1_desc">
+          <div class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_rg1_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
               <li>راه‌اندازی کامل فروشگاه اینترنتی ووکامرس برای عرضه سخت‌افزار کامپیوتر و لایسنس بازی‌های اورجینال (استیم و یوپلی).</li>
               <li>پیکربندی درگاه‌های پرداخت شتاب، سئو تکنیکال مقدماتی و مدیریت فرآیند تحویل سفارشات دیجیتال.</li>
@@ -973,7 +1008,7 @@
         </div>
 
         <!-- 5. TPrime / PSNPlus -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-2">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="job_tprime_title">
               طراحی وبسایت فروشگاهی اکانت توییچ پرایم و اشتراک‌ها
@@ -981,7 +1016,7 @@
             <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400" data-i18n="job_tprime_date">اردیبهشت ۱۳۹۹ تا مرداد ۱۳۹۹</span>
           </div>
           <div class="text-xs text-zinc-500 font-mono">tprime / psnplus.ir</div>
-          <div class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_tprime_desc">
+          <div class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_tprime_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
               <li>طراحی لندینگ تک‌صفحه‌ای اختصاصی با وردپرس جهت ارائه سریع اشتراک‌های دیجیتال و خدمات بازی‌های آنلاین.</li>
               <li>بهینه‌سازی فرم‌ها و فرآیند ثبت و پیگیری آنی سفارشات مشتریان.</li>
@@ -990,7 +1025,7 @@
         </div>
 
         <!-- 6. RexMovie -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-2">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-2">
           <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
             <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="job_rex_title">
               طراحی و مدیریت وبسایت دانلود فیلم و سریال
@@ -998,7 +1033,7 @@
             <span class="text-xs font-mono text-zinc-500 dark:text-zinc-400" data-i18n="job_rex_date">شهریور ۱۳۹۸ تا بهمن ۱۳۹۸</span>
           </div>
           <div class="text-xs text-zinc-500 font-mono">rexmovie.ir</div>
-          <div class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_rex_desc">
+          <div class="text-xs sm:text-sm text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_rex_desc">
             <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
               <li>توسعه پرتال رسانه‌ای دانلود فیلم و سریال از پایه و پیکربندی سرورهای دانلود و ذخیره‌سازی داده.</li>
               <li>مدیریت تیم تولید محتوا و بهینه‌سازی فنی ساختار لینک‌ها و پایگاه داده وردپرس.</li>
@@ -1035,7 +1070,7 @@
           </p>
         </div>
 
-        <div class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify space-y-1.5" data-i18n="pccc_desc">
+        <div class="text-xs text-zinc-700 dark:text-zinc-300 leading-relaxed text-justify space-y-1.5" data-i18n="pccc_desc">
           <p>پروژه پژوهشی و دیتاست بالینی ثبت‌شده در ۲۹ جلسه کاری مداوم (بیش از ۱۴۲ ساعت صوت طبیعی، ۴۲۳,۰۰۰ کلمه و ۲۷,۰۰۰ نوبت مکالمه) در مطب‌های بالینی جهت آموزش مدل‌های هوش مصنوعی اسناد پزشکی (Ambient Clinical AI):</p>
           <ul class="list-disc rtl:pr-4 ltr:pl-4 space-y-1">
             <li>طراحی و ساخت نرم‌افزار اختصاصی اندروید (Java SDK) برای ضبط پیوسته و هوشمند صدای محیط با تله‌متری آنلاین وضعیت از طریق بازوی بله.</li>
@@ -1090,7 +1125,7 @@
       </h2>
       <div class="space-y-4">
         <!-- University -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-1">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-1">
           <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="edu_title">
             کارشناسی مهندسی کامپیوتر (نرم‌افزار)
           </h3>
@@ -1100,7 +1135,7 @@
         </div>
 
         <!-- High School -->
-        <div class="border-r-2 border-zinc-200 dark:border-zinc-800 pr-4 space-y-1">
+        <div class="border-r-2 border-zinc-300 dark:border-zinc-800 pr-4 space-y-1">
           <h3 class="text-sm font-bold text-zinc-900 dark:text-white" data-i18n="edu_highschool_title">
             دیپلم ریاضی و فیزیک
           </h3>
