@@ -54,11 +54,82 @@
       line-height: 1.85;
     }
 
-    /* Print / PDF Resume Stylesheet */
+    /* Screen vs Print visibility */
+    #resumePrintView {
+      display: none;
+    }
+
+    /* Standalone Resume Theming */
+    html.dark .cv-root {
+      background-color: #0b0c10;
+      color: #e4e4e7;
+    }
+    html.dark .cv-header {
+      border-color: #27272a;
+    }
+    html.dark .cv-box {
+      background-color: #121319;
+      border-color: #27272a;
+    }
+    html.dark .cv-title {
+      color: #ffffff;
+    }
+    html.dark .cv-accent {
+      color: #38bdf8;
+    }
+    html.dark .cv-muted {
+      color: #a1a1aa;
+    }
+    html.dark .cv-border {
+      border-color: #27272a;
+    }
+    html.dark .cv-tag {
+      background-color: #1c1d25;
+      color: #d4d4d8;
+      border: 1px solid #2e303b;
+    }
+    html.dark .cv-text {
+      color: #d4d4d8;
+    }
+
+    /* Light Theme */
+    html:not(.dark) .cv-root {
+      background-color: #ffffff;
+      color: #1e293b;
+    }
+    html:not(.dark) .cv-header {
+      border-color: #e2e8f0;
+    }
+    html:not(.dark) .cv-box {
+      background-color: #f8fafc;
+      border-color: #e2e8f0;
+    }
+    html:not(.dark) .cv-title {
+      color: #0f172a;
+    }
+    html:not(.dark) .cv-accent {
+      color: #0284c7;
+    }
+    html:not(.dark) .cv-muted {
+      color: #64748b;
+    }
+    html:not(.dark) .cv-border {
+      border-color: #e2e8f0;
+    }
+    html:not(.dark) .cv-tag {
+      background-color: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+    html:not(.dark) .cv-text {
+      color: #334155;
+    }
+
+    /* Dedicated Standalone PDF Print Rules */
     @media print {
       @page {
         size: A4 portrait;
-        margin: 10mm 12mm 10mm 12mm;
+        margin: 8mm 9mm 8mm 9mm;
       }
 
       * {
@@ -69,142 +140,98 @@
         text-shadow: none !important;
       }
 
-      /* Dark Mode PDF */
-      html.dark, html.dark body {
-        background-color: #0c0d11 !important;
-        color: #f4f4f5 !important;
-      }
-      html.dark .rounded-xl {
-        background-color: #14151b !important;
-        border-color: #27272a !important;
-      }
-      html.dark .text-zinc-900 {
-        color: #ffffff !important;
-      }
-      html.dark .text-zinc-800 {
-        color: #f4f4f5 !important;
-      }
-      html.dark .text-zinc-600, html.dark .text-zinc-500, html.dark .text-zinc-400 {
-        color: #a1a1aa !important;
-      }
-      html.dark .border-zinc-200, html.dark .border-zinc-800 {
-        border-color: #27272a !important;
-      }
-      html.dark .bg-zinc-100 {
-        background-color: #1f2026 !important;
-        color: #d4d4d8 !important;
-      }
-      html.dark .bg-zinc-800 {
-        background-color: #27272a !important;
-      }
-      html.dark .bg-sky-50 {
-        background-color: #0c2d48 !important;
-        border-color: #0369a1 !important;
-      }
-      html.dark .text-sky-700 {
-        color: #7dd3fc !important;
-      }
-      html.dark .text-emerald-400, html.dark .text-emerald-600 {
-        color: #34d399 !important;
-      }
-      html.dark a.text-sky-600, html.dark a.text-sky-400 {
-        color: #38bdf8 !important;
-      }
-
-      /* Light Mode PDF */
-      html:not(.dark), html:not(.dark) body {
-        background-color: #ffffff !important;
-        color: #18181b !important;
-      }
-      html:not(.dark) .rounded-xl {
-        background-color: #ffffff !important;
-        border-color: #e2e8f0 !important;
-      }
-      html:not(.dark) .text-zinc-900 {
-        color: #09090b !important;
-      }
-      html:not(.dark) .text-zinc-800 {
-        color: #18181b !important;
-      }
-      html:not(.dark) .text-zinc-600, html:not(.dark) .text-zinc-500 {
-        color: #4b5563 !important;
-      }
-      html:not(.dark) .border-zinc-200, html:not(.dark) .border-zinc-800 {
-        border-color: #e2e8f0 !important;
-      }
-      html:not(.dark) .bg-zinc-100 {
-        background-color: #f1f5f9 !important;
-        color: #334155 !important;
-      }
-      html:not(.dark) a.text-sky-600, html:not(.dark) a.text-sky-400 {
-        color: #0284c7 !important;
-      }
-
-      /* Hide web-only UI elements */
+      /* Hide web interactive portfolio and modal controls */
+      #webPortfolioView,
+      #resumePreviewModal,
       header,
-      .no-print,
-      details summary {
+      footer,
+      .no-print {
         display: none !important;
       }
 
-      /* Container fits printable page cleanly */
-      .max-w-3xl {
-        max-width: 100% !important;
-        padding: 0 !important;
+      body {
+        background: transparent !important;
         margin: 0 !important;
+        padding: 0 !important;
       }
 
-      /* Section & block spacing */
-      section {
-        margin-bottom: 1.25rem !important;
+      #resumePrintView {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
       }
 
-      /* Prevent awkward page break cuts across cards */
-      .rounded-xl,
-      .border-r-2,
-      .space-y-3 > div,
-      .space-y-3.5 > div,
-      footer {
+      .avoid-break {
         break-inside: avoid !important;
         page-break-inside: avoid !important;
       }
 
-      /* Sliders layout inside PDF: neat 2-column infographic grid */
-      details {
-        display: block !important;
-        border-top-width: 1px !important;
-        margin-top: 6px !important;
-        padding-top: 6px !important;
+      html.dark, html.dark body {
+        background-color: #0b0c10 !important;
+        color: #e4e4e7 !important;
       }
-      details > div {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 6px 14px !important;
-        padding-top: 4px !important;
+      html.dark #resumePrintView .cv-box {
+        background-color: #121319 !important;
+        border-color: #27272a !important;
+      }
+      html.dark #resumePrintView .cv-title {
+        color: #ffffff !important;
+      }
+      html.dark #resumePrintView .cv-accent {
+        color: #38bdf8 !important;
+      }
+      html.dark #resumePrintView .cv-muted {
+        color: #a1a1aa !important;
+      }
+      html.dark #resumePrintView .cv-border {
+        border-color: #27272a !important;
+      }
+      html.dark #resumePrintView .cv-tag {
+        background-color: #1c1d25 !important;
+        color: #d4d4d8 !important;
+        border: 1px solid #2e303b !important;
+      }
+      html.dark #resumePrintView .cv-text {
+        color: #d4d4d8 !important;
       }
 
-      /* Clean link styling */
-      a {
-        text-decoration: none !important;
+      html:not(.dark), html:not(.dark) body {
+        background-color: #ffffff !important;
+        color: #1e293b !important;
       }
-
-      /* Compact bio header */
-      h1 {
-        font-size: 1.65rem !important;
-        line-height: 1.2 !important;
+      html:not(.dark) #resumePrintView .cv-box {
+        background-color: #f8fafc !important;
+        border-color: #e2e8f0 !important;
       }
-
-      p {
-        font-size: 11px !important;
-        line-height: 1.7 !important;
+      html:not(.dark) #resumePrintView .cv-title {
+        color: #0f172a !important;
+      }
+      html:not(.dark) #resumePrintView .cv-accent {
+        color: #0284c7 !important;
+      }
+      html:not(.dark) #resumePrintView .cv-muted {
+        color: #64748b !important;
+      }
+      html:not(.dark) #resumePrintView .cv-border {
+        border-color: #e2e8f0 !important;
+      }
+      html:not(.dark) #resumePrintView .cv-tag {
+        background-color: #f1f5f9 !important;
+        color: #334155 !important;
+        border: 1px solid #cbd5e1 !important;
+      }
+      html:not(.dark) #resumePrintView .cv-text {
+        color: #334155 !important;
       }
     }
   </style>
 </head>
 <body class="bg-[#fafafa] text-zinc-800 dark:bg-[#0c0d11] dark:text-zinc-200 min-h-screen transition-colors duration-200">
 
-  <!-- Container -->
-  <div class="max-w-3xl mx-auto px-5 sm:px-8 py-10 sm:py-16">
+  <!-- Interactive Web Portfolio View -->
+  <div id="webPortfolioView" class="max-w-3xl mx-auto px-5 sm:px-8 py-10 sm:py-16">
 
     <!-- Top Navigation / Controls -->
     <header class="flex items-center justify-between pb-8 border-b border-zinc-200 dark:border-zinc-800/80 mb-10">
@@ -228,8 +255,14 @@
           <svg id="themeIconMoon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
         </button>
 
-        <!-- Print Resume -->
-        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1 px-3 py-1 rounded-md text-xs font-medium bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 transition-colors no-print">
+        <!-- Standalone Resume PDF Preview -->
+        <button onclick="openResumePreview()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium border border-zinc-300 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-zinc-700 dark:text-zinc-300 hover:border-zinc-400 dark:hover:border-zinc-700 transition-colors no-print" title="مشاهده پیش‌نمایش نسخه چاپی رزومه">
+          <svg class="w-3.5 h-3.5 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+          <span data-i18n="cv_preview_btn">پیش‌نمایش PDF</span>
+        </button>
+
+        <!-- Print Resume Directly -->
+        <button onclick="window.print()" class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1 rounded-md text-xs font-medium bg-zinc-900 hover:bg-zinc-800 dark:bg-zinc-100 dark:hover:bg-zinc-200 text-white dark:text-zinc-900 transition-colors no-print">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
           <span data-i18n="btn_print">پرینت رزومه</span>
         </button>
@@ -837,7 +870,7 @@
             <a href="https://venorad.ir" target="_blank" rel="noopener noreferrer" class="hover:underline">venorad.ir (سایت فعال)</a>
           </div>
           <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_venorad_desc">
-            راه‌اندازی صفر تا صد فروشگاه اینترنتی عطر با بیش از ۲۵۰۰ محصول. به جای تکیه بر خرید افزونه‌های تجاری آماده و هزینه‌بر، ترجیح دادم افزونه‌های مورد نیاز را به‌صورت اختصاصی و سبک کدنویسی کنم که علاوه بر صرفه‌جویی مالی در هزینه‌های پروژه و حذف وابستگی به افزونه‌های سنگین، سرعت بارگذاری و تطبیق ۱۰۰٪ با قالب فروشگاه حاصل شد؛ از جمله: افزونه هرم و آکوردهای بویایی عطرها (با سیستم کش ترنزینت)، افزونه فیلتر ایجکس لحظه‌ای محصولات، و افزونه وضعیت سفارشی انبار. همچنین طراحی پایپ‌لاین پایتون برای استخراج خودکار و استانداردسازی اطلاعات محصولات و بارگذاری دسته‌ای در سایت با تصاویر WebP.
+            راه‌اندازی صفر تا صد فروشگاه اینترنتی عطر با بیش از ۲۵۰۰ محصول. توسعه اختصاصی و سبک افزونه‌های مورد نیاز ووکامرس (هرم بویایی با کش ترنزینت، فیلتر ایجکس محصولات و وضعیت انبار سفارشی) برای حذف وابستگی به افزونه‌های سنگین تجاری، و طراحی پایپ‌لاین پایتون جهت استخراج، پاکسازی و بارگذاری خودکار و دسته‌ای محصولات.
           </p>
           <div class="flex flex-wrap items-center gap-3 pt-1 text-xs">
             <a href="https://github.com/Bekend/wc-perfume-notes" target="_blank" rel="noopener noreferrer" class="font-medium text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1">
@@ -862,7 +895,7 @@
           </div>
           <div class="text-xs text-zinc-500" data-i18n="job_bots_company">فریلنس • ایران، گنبد کاووس</div>
           <p class="text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="job_bots_desc">
-            پیاده‌سازی ربات‌های اتومیشن و پایشگر با پایتون؛ از جمله اسکرپر لحظه‌ای برای پایش و استخراج آگهی‌های حواله خودرو در سایت‌های دیوار و شیپور با هشدار آنی در تلگرام، و ساخت سیستم مدیریت دانلود شخصی WebIDM به همراه بات تلگرام (پروژه اخیراً توسعه‌یافته برای مدیریت ناهمگام و استریم دانلودها).
+            پیاده‌سازی ربات‌های اتومیشن و پایشگر با پایتون؛ از جمله اسکرپر لحظه‌ای برای پایش و استخراج آگهی‌های حواله خودرو در دیوار و شیپور با هشدار آنی در تلگرام، و ساخت سیستم مدیریت دانلود شخصی چندنخی ناهمگام WebIDM در پایتون با کنترل از طریق بات تلگرام.
           </p>
           <div class="pt-1 text-xs">
             <a href="https://github.com/Bekend/web-idm" target="_blank" rel="noopener noreferrer" class="font-medium text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1">
@@ -961,42 +994,8 @@
         </div>
 
         <p class="text-xs text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="pccc_desc">
-          پروژه کارشناسی و دیتاست پژوهشی ثبت‌شده در ۲۹ جلسه کاری مداوم در مطب‌های بالینی. هدف این پروژه برطرف‌کردن کمبود منابع داده‌ای طبیعی بدون سناریو برای توسعه مدل‌های هوش مصنوعی پزشکی و سیستم‌های خودکار اسناد بالینی (Ambient Clinical AI) بوده است. در این طرح، علاوه بر پیاده‌سازی سرویس اختصاصی اندروید برای ضبط پیوسته بدون فشرده‌سازی (PCM تک‌کاناله ۱۶ بیت ۱۶kHz) با تلمتری و مانیتورینگ آنلاین وضعیت سلامت از طریق بات بله، یک خط لوله تمام‌عیار هوش مصنوعی برای پردازش، تفکیک و پالایش داده‌ها طراحی و پیاده‌سازی شد.
+          پروژه کارشناسی و دیتاست پژوهشی ثبت‌شده در ۲۹ جلسه کاری مداوم در مطب‌های بالینی جهت آموزش مدل‌های هوش مصنوعی پزشکی و اسناد بالینی (Ambient Clinical AI). در این پروژه سرویس اختصاصی اندروید برای ضبط پیوسته با مانیتورینگ آنلاین بات بله توسعه یافت و خط لوله پردازش صوت و متن شامل رونویسی گفتار با Whisper Large-v3، تفکیک عصبی گویندگان با pyannote.audio و پالایش بالینی متون با Gemini 3.5 Flash پیاده‌سازی و روی RTX 3060 با سرعت ۸ برابر زمان واقعی ارزیابی شد.
         </p>
-
-        <!-- AI & Speech Processing Pipeline Architecture -->
-        <div class="rounded-lg border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950/60 p-3.5 space-y-2.5 text-xs">
-          <div class="flex items-center gap-1.5 font-bold text-zinc-900 dark:text-white text-xs">
-            <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            <span data-i18n="pccc_pipeline_title">پایپ‌لاین هوش مصنوعی و مدل‌های پردازش صوت و زبان طبیعی (AI Architecture):</span>
-          </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-[11px]">
-            <div class="p-2.5 rounded border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 space-y-1">
-              <span class="font-bold text-sky-600 dark:text-sky-400 block" data-i18n="pccc_pipe_asr_title">۱. تبدیل گفتار به متن (ASR with Whisper Large-v3)</span>
-              <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="pccc_pipe_asr_desc">
-                استفاده از ترنسفورمر OpenAI Whisper Large-v3 همراه با پرامپت‌گذاری اختصاصی واژگان پزشکی جهت رونویسی دقیق متون بالینی و اصطلاحات تخصصی دارویی.
-              </p>
-            </div>
-            <div class="p-2.5 rounded border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 space-y-1">
-              <span class="font-bold text-emerald-600 dark:text-emerald-400 block" data-i18n="pccc_pipe_diar_title">۲. دیارایزیشن عصبی (pyannote.audio)</span>
-              <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="pccc_pipe_diar_desc">
-                تفکیک خودکار نقش گویندگان (پزشک، بیمار، همراه و کودک)، استخراج امبدینگ‌های عصبی صدا و کشف بخش‌های همپوشانی گفتار (Overlapping Speech).
-              </p>
-            </div>
-            <div class="p-2.5 rounded border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 space-y-1">
-              <span class="font-bold text-indigo-600 dark:text-indigo-400 block" data-i18n="pccc_pipe_llm_title">۳. پالایش هوشمند بالینی با LLM (Gemini 3.5 Flash)</span>
-              <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="pccc_pipe_llm_desc">
-                اصلاح علائم نگارشی و نویزهای ترنسکریپشن با پرامپتینگ سخت‌گیرانه ضدتوهم (Zero-Hallucination) جهت حفظ قطعی و بدون تغییر تمام حقایق بالینی.
-              </p>
-            </div>
-            <div class="p-2.5 rounded border border-zinc-200/80 dark:border-zinc-800 bg-white dark:bg-zinc-900/60 space-y-1">
-              <span class="font-bold text-amber-600 dark:text-amber-400 block" data-i18n="pccc_pipe_bench_title">۴. ارزیابی بلادرنگ و بنچمارک سخت‌افزاری</span>
-              <p class="text-zinc-600 dark:text-zinc-300 leading-relaxed text-justify" data-i18n="pccc_pipe_bench_desc">
-                اجرا و بنچمارک خط لوله بر روی پردازنده گرافیکی RTX 3060 با نرخ پردازش ۸ برابر سریع‌تر از زمان واقعی (RTF ≈ ۰.۱۲۵ به همراه چک‌پوینت‌های ۵ دقیقه‌ای ضدخطا).
-              </p>
-            </div>
-          </div>
-        </div>
 
         <!-- 3 Distinct Repository Links + Official Conference Poster -->
         <div class="pt-1 space-y-2 text-xs">
@@ -1054,6 +1053,254 @@
       </div>
     </footer>
 
+  </div>
+
+  <!-- ========================================== -->
+  <!-- STANDALONE EXECUTIVE RESUME (FOR PDF PRINT) -->
+  <!-- ========================================== -->
+  <div id="resumePrintView" class="cv-root font-sans text-xs leading-normal">
+    <!-- Header Block -->
+    <div class="cv-header border-b-2 cv-border pb-3.5 mb-3.5">
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <h1 class="text-xl sm:text-2xl font-black cv-title tracking-tight" data-i18n="name">سید شهاب‌الدین حسینی بای</h1>
+          <p class="text-xs font-semibold cv-accent mt-0.5" data-i18n="headline">توسعه‌دهنده نرم‌افزار | علاقه‌مند به بک‌اند، اتومیشن و سیستم‌ها</p>
+        </div>
+        <div class="text-left font-mono text-[11px] cv-muted space-y-0.5">
+          <div><span class="font-bold cv-title">shahabhb.ir</span> 🌐</div>
+          <div><span>github.com/Bekend</span> 💻</div>
+        </div>
+      </div>
+
+      <!-- Contact & Meta Strip -->
+      <div class="mt-2.5 pt-2 border-t cv-border flex flex-wrap items-center justify-between gap-y-1.5 text-[10.5px] cv-muted">
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+          <span>✉️ <span class="font-mono">shahabhosseinibay@gmail.com</span></span>
+          <span>📱 <span class="font-mono">09999149216</span></span>
+          <span>📍 <span data-i18n="tbl_loc_val">گلستان (گرگان / گنبد)</span></span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="px-2 py-0.5 rounded cv-tag font-mono text-[10px]" data-i18n="tbl_military_val">معافیت دائم</span>
+          <span class="px-2 py-0.5 rounded cv-tag font-mono text-[10px]" data-i18n="tbl_age_val">۲۲ سال (متولد ۱۳۸۳)</span>
+          <span class="px-2 py-0.5 rounded cv-tag font-mono text-[10px] text-emerald-500 font-semibold" data-i18n="status_pill">آماده همکاری</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="mb-3.5 avoid-break">
+      <h2 class="text-[11px] font-mono uppercase font-bold tracking-wider cv-accent mb-1 flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+        <span data-i18n="cv_summary_title">خلاصه حرفه‌ای و پروفایل مهندسی</span>
+      </h2>
+      <p class="text-[11px] leading-relaxed cv-text text-justify" data-i18n="about_text">
+        دانشجوی مهندسی کامپیوتر علاقه‌مند به کار با کد و سیستم‌های واقعی. بیشتر تمرکز و تجربه عملی من بر توسعه اسکریپت‌ها و سرویس‌های پایتون، راه‌اندازی و توسعه وبسایت‌ها و افزونه‌های وردپرس و ووکامرس، پیاده‌سازی ربات‌های اتومیشن و اسکرپینگ، و کار تجربی با سرور و شبکه‌های محلی بوده است. آماده همکاری در موقعیت‌های شغلی توسعه بک‌اند، پشتیبانی و توسعه وردپرس، پروژه‌های اتومیشن داده، و کارهای مرتبط با زیرساخت سرور هستم؛ با این هدف که در یک تیم فنی پویا یادگیری مداوم داشته باشم و وظایف محوله را با دقت، مسئولیت‌پذیری و کیفیت جلو ببرم.
+      </p>
+    </div>
+
+    <!-- Technical Skills Matrix -->
+    <div class="mb-3.5 avoid-break">
+      <h2 class="text-[11px] font-mono uppercase font-bold tracking-wider cv-accent mb-1.5 flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+        <span data-i18n="cv_skills_title">مهارت‌های فنی و شایستگی‌های تخصصی</span>
+      </h2>
+      <div class="grid grid-cols-2 gap-2.5 text-[10.5px]">
+        
+        <!-- Box 1: Backend -->
+        <div class="cv-box rounded border p-2 space-y-1">
+          <div class="flex items-center justify-between font-bold cv-title">
+            <span data-i18n="cv_cat_backend">زبان اصلی و معماری بک‌اند</span>
+            <span class="font-mono text-[10px] cv-accent">Python / PHP</span>
+          </div>
+          <div class="space-y-0.5 cv-text">
+            <div>• <strong>Python (پیشرفته):</strong> Asyncio، استخراج داده (BS4/Selenium)، ربات‌های تلگرام و بله، اتومیشن دیتا</div>
+            <div>• <strong>PHP و ووکامرس:</strong> توسعه افزونه‌های اختصاصی سبک، کش ترنزینت، فیلتر ایجکس، هوک‌ها</div>
+            <div>• <strong>سیستم WebIDM:</strong> معماری دانلود منیجر شخصی چندنخی ناهمگام و استریم</div>
+            <div>• <strong>فریم‌ورک‌ها:</strong> آشنایی با جنگو (Django) و اصول REST API</div>
+          </div>
+        </div>
+
+        <!-- Box 2: Infrastructure & Homelab -->
+        <div class="cv-box rounded border p-2 space-y-1">
+          <div class="flex items-center justify-between font-bold cv-title">
+            <span data-i18n="cv_cat_infra">زیرساخت سرور و لینوکس (Homelab)</span>
+            <span class="font-mono text-[10px] cv-accent">HP Enterprise / Linux</span>
+          </div>
+          <div class="space-y-0.5 cv-text">
+            <div>• <strong>سرور رکمونت فیزیکی:</strong> پیکربندی و نگهداری سرور HP ProLiant DL360p Gen8، iLO 4، RAID</div>
+            <div>• <strong>مجازی‌سازی و کانتینر:</strong> VMware ESXi 6.5، Hyper-V، کانتینرسازی تجربی داکر (Docker)</div>
+            <div>• <strong>لینوکس و شبکه:</strong> Ubuntu Server، شل Bash، شبکه مش Tailscale، روتینگ، پورت فورواردینگ</div>
+            <div>• <strong>وب‌سرور و کلود:</strong> ریورس پراکسی Nginx، استقرار VPS در ابر آروان و هتزنر</div>
+          </div>
+        </div>
+
+        <!-- Box 3: AI & Speech Engineering -->
+        <div class="cv-box rounded border p-2 space-y-1">
+          <div class="flex items-center justify-between font-bold cv-title">
+            <span data-i18n="cv_cat_ai">هوش مصنوعی، پردازش گفتار و LLM</span>
+            <span class="font-mono text-[10px] cv-accent">Speech AI & Deep Learning</span>
+          </div>
+          <div class="space-y-0.5 cv-text">
+            <div>• <strong>بازشناسی گفتار (ASR):</strong> مدل ترنسفورمر Whisper Large-v3 با پرامپتینگ تخصصی بالینی</div>
+            <div>• <strong>دیارایزیشن عصبی:</strong> تفکیک نقش گویندگان و کشف همپوشانی صدا با pyannote.audio</div>
+            <div>• <strong>پالایش متون:</strong> ادیت هوشمند با Gemini 3.5 Flash با سیاست ضدتوهم (Zero-Hallucination)</div>
+            <div>• <strong>مدل‌های محلی و ابزار:</strong> اجرای مدل‌ها با Ollama، کوانتیزاسیون GGUF، عامل Antigravity</div>
+          </div>
+        </div>
+
+        <!-- Box 4: Tools & Systems -->
+        <div class="cv-box rounded border p-2 space-y-1">
+          <div class="flex items-center justify-between font-bold cv-title">
+            <span data-i18n="cv_cat_tools">توسعه چندمنظوره، وب و زبان‌ها</span>
+            <span class="font-mono text-[10px] cv-accent">Full-Stack & Systems</span>
+          </div>
+          <div class="space-y-0.5 cv-text">
+            <div>• <strong>توسعه سیستم و اندروید:</strong> سرویس ضبط پس‌زمینه بدون وقفه (Java & Android SDK)</div>
+            <div>• <strong>بازی‌سازی:</strong> موتور Godot 4 و GDScript (تولید رویه‌ای نقشه، بازی استراتژی 4X)</div>
+            <div>• <strong>وب و طراحی:</strong> HTML5، CSS3، بوت‌استرپ، کنترل نسخه Git، ادوبی فتوشاپ</div>
+            <div>• <strong>زبان‌های خارجی:</strong> انگلیسی (روان - متون تخصصی)، آلمانی (A1/A2)، فارسی (مادری)</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Academic Research & PCCC Project -->
+    <div class="mb-3.5 avoid-break">
+      <h2 class="text-[11px] font-mono uppercase font-bold tracking-wider cv-accent mb-1.5 flex items-center justify-between">
+        <span class="flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+          <span data-i18n="sec_research_title">پروژه دانشگاهی و پژوهش علمی</span>
+        </span>
+        <span class="px-2 py-0.5 rounded text-[9.5px] font-mono bg-sky-500/10 text-sky-600 dark:text-sky-400 border border-sky-500/20" data-i18n="pccc_badge">ارائه شفاهی در کنفرانس بایواینتلیجنس ۲۰۲۶ • نمایه ISC</span>
+      </h2>
+
+      <div class="cv-box rounded border p-2.5 space-y-1.5">
+        <div class="flex flex-wrap items-center justify-between gap-1.5">
+          <div>
+            <h3 class="font-bold cv-title text-xs" data-i18n="pccc_title">PCCC: پیکره صوتی-متنی مکالمات طبیعی پزشک و بیمار به زبان فارسی</h3>
+            <p class="text-[10px] cv-accent font-medium mt-0.5" data-i18n="pccc_subtitle">اولین مجموعه داده طبیعی مکالمات بالینی در ایران و خط لوله جامع هوش مصنوعی گفتار و متن</p>
+          </div>
+          <span class="font-mono text-[9.5px] cv-muted px-2 py-0.5 rounded cv-tag" data-i18n="pccc_stat_badge">۱۴۲+ ساعت صوت • ۴۲۳,۰۰۰+ کلمه • ۲۷,۰۰۰+ نوبت مکالمه</span>
+        </div>
+
+        <p class="text-[10.5px] leading-relaxed cv-text text-justify" data-i18n="pccc_desc">
+          پروژه کارشناسی و دیتاست پژوهشی ثبت‌شده در ۲۹ جلسه کاری مداوم در مطب‌های بالینی جهت آموزش مدل‌های هوش مصنوعی پزشکی و اسناد بالینی (Ambient Clinical AI). در این پروژه سرویس اختصاصی اندروید برای ضبط پیوسته با مانیتورینگ آنلاین بات بله توسعه یافت و خط لوله پردازش صوت و متن شامل رونویسی گفتار با Whisper Large-v3، تفکیک عصبی گویندگان با pyannote.audio و پالایش بالینی متون با Gemini 3.5 Flash پیاده‌سازی و روی RTX 3060 با سرعت ۸ برابر زمان واقعی ارزیابی شد.
+        </p>
+
+        <div class="pt-1 border-t cv-border flex flex-wrap items-center justify-between text-[10px] font-mono">
+          <span class="cv-muted">لینک‌های دسترسی در گیت‌هاب:</span>
+          <div class="flex items-center gap-2.5">
+            <a href="https://github.com/Bekend/medical-dataset" class="cv-accent hover:underline">مخزن اصلی</a> •
+            <a href="https://github.com/Bekend/medical-dataset/tree/main/dataset" class="cv-accent hover:underline">دیتاست</a> •
+            <a href="https://github.com/Bekend/medical-dataset/tree/main/whisper_pyannote" class="cv-accent hover:underline">کد پایپ‌لاین</a> •
+            <a href="https://shahabhb.ir/biointelligence-2026.jpg" class="cv-accent hover:underline">پوستر رسمی (ISC)</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Work Experience & Projects -->
+    <div class="mb-3.5 avoid-break">
+      <h2 class="text-[11px] font-mono uppercase font-bold tracking-wider cv-accent mb-1.5 flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-sky-500"></span>
+        <span data-i18n="sec_exp_title">سوابق کاری و پروژه‌های عملی</span>
+      </h2>
+
+      <div class="space-y-2">
+        <!-- 1. Venorad -->
+        <div class="cv-box rounded border p-2 space-y-0.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold cv-title" data-i18n="job_venorad_title">طراحی، توسعه و اتومیشن فروشگاه اینترنتی ونوراد</span>
+            <span class="font-mono text-[10px] cv-muted" data-i18n="job_venorad_date">مرداد ۱۴۰۵ - اکنون (در حال توسعه)</span>
+          </div>
+          <p class="text-[10.5px] leading-relaxed cv-text text-justify" data-i18n="job_venorad_desc">
+            راه‌اندازی صفر تا صد فروشگاه اینترنتی عطر با بیش از ۲۵۰۰ محصول. توسعه اختصاصی و سبک افزونه‌های مورد نیاز ووکامرس (هرم بویایی با کش ترنزینت، فیلتر ایجکس محصولات و وضعیت انبار سفارشی) برای حذف وابستگی به افزونه‌های سنگین تجاری، و طراحی پایپ‌لاین پایتون جهت استخراج، پاکسازی و بارگذاری خودکار و دسته‌ای محصولات.
+          </p>
+        </div>
+
+        <!-- 2. Bots & Scraping -->
+        <div class="cv-box rounded border p-2 space-y-0.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold cv-title" data-i18n="job_bots_title">طراحی ربات‌های تلگرام و اتومیشن اسکرپینگ</span>
+            <span class="font-mono text-[10px] cv-muted" data-i18n="job_bots_date">دی ۱۴۰۳ تا بهمن ۱۴۰۳ (۱ ماه)</span>
+          </div>
+          <p class="text-[10.5px] leading-relaxed cv-text text-justify" data-i18n="job_bots_desc">
+            پیاده‌سازی ربات‌های اتومیشن و پایشگر با پایتون؛ از جمله اسکرپر لحظه‌ای برای پایش و استخراج آگهی‌های حواله خودرو در دیوار و شیپور با هشدار آنی در تلگرام، و ساخت سیستم مدیریت دانلود شخصی چندنخی ناهمگام WebIDM در پایتون با کنترل از طریق بات تلگرام.
+          </p>
+        </div>
+
+        <!-- 3. Alpha Funded Trader -->
+        <div class="cv-box rounded border p-2 space-y-0.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold cv-title" data-i18n="job_alpha_title">بازطراحی و بهینه‌سازی وبسایت پراپ فرم</span>
+            <span class="font-mono text-[10px] cv-muted" data-i18n="job_alpha_date">مرداد ۱۴۰۲ تا آذر ۱۴۰۲ (۴ ماه)</span>
+          </div>
+          <p class="text-[10.5px] leading-relaxed cv-text text-justify" data-i18n="job_alpha_desc">
+            اصلاح ساختار وبسایت، رفع ایرادات عملکردی و باگ‌های فنی، و بهینه‌سازی سرعت و تجربه کاربری برای شرکت پراپ تریدینگ آلفا فاند تریدر.
+          </p>
+        </div>
+
+        <!-- 4. RG1 & RexMovie -->
+        <div class="cv-box rounded border p-2 space-y-0.5">
+          <div class="flex items-center justify-between text-xs">
+            <span class="font-bold cv-title">توسعه پلتفرم فروش لایسنس RG1.ir و پرتال دانلودی RexMovie.ir</span>
+            <span class="font-mono text-[10px] cv-muted">۱۳۹۸ تا ۱۳۹۹</span>
+          </div>
+          <p class="text-[10.5px] leading-relaxed cv-text text-justify">
+            راه‌اندازی کامل فروشگاه فروش لایسنس بازی‌های اورجینال از پایه، اتصال درگاه‌های بانکی، مدیریت سفارشات دیجیتال؛ طراحی و مدیریت پرتال رسانه‌ای و دانلود فیلم، پیکربندی سرورهای دانلود و هدایت تیم تولید محتوا.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Education & Verification -->
+    <div class="avoid-break grid grid-cols-2 gap-2.5 pt-0.5">
+      <!-- Education -->
+      <div class="cv-box rounded border p-2">
+        <h2 class="text-[9.5px] font-mono uppercase font-bold cv-accent mb-0.5" data-i18n="sec_edu_title">سوابق تحصیلی</h2>
+        <div class="font-bold cv-title text-xs" data-i18n="edu_title">کارشناسی مهندسی کامپیوتر (نرم‌افزار)</div>
+        <div class="text-[10px] cv-muted mt-0.5" data-i18n="edu_place">دانشگاه گلستان • ورودی ۱۴۰۱ (در حال تحصیل - ترم ۹)</div>
+      </div>
+
+      <!-- Links -->
+      <div class="cv-box rounded border p-2 font-mono text-[10px] space-y-0.5">
+        <div class="font-bold cv-title">تأییدیه و دسترسی به سورس‌کدها و پورتفولیو:</div>
+        <div class="flex items-center justify-between cv-muted">
+          <span>دامنه رسمی رزومه:</span>
+          <a href="https://shahabhb.ir" class="cv-accent font-semibold">https://shahabhb.ir</a>
+        </div>
+        <div class="flex items-center justify-between cv-muted">
+          <span>مخازن و کدها در گیت‌هاب:</span>
+          <a href="https://github.com/Bekend" class="cv-accent font-semibold">github.com/Bekend</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Standalone Resume Preview Modal -->
+  <div id="resumePreviewModal" class="fixed inset-0 z-50 hidden overflow-y-auto bg-black/75 backdrop-blur-sm p-4 sm:p-6 no-print flex flex-col items-center">
+    <!-- Modal Control Bar -->
+    <div class="w-full max-w-4xl bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-t-xl px-4 py-3 flex items-center justify-between shadow-xl">
+      <div class="flex items-center gap-2">
+        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <span class="text-xs font-bold text-zinc-900 dark:text-white" data-i18n="cv_modal_title">پیش‌نمایش نسخه مستقل رزومه PDF (مخصوص استخدام)</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md text-xs font-semibold bg-sky-600 hover:bg-sky-500 text-white transition-colors shadow">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>
+          <span data-i18n="cv_modal_print">چاپ یا ذخیره به صورت PDF</span>
+        </button>
+        <button onclick="closeResumePreview()" class="px-3 py-1.5 rounded-md text-xs font-medium border border-zinc-300 dark:border-zinc-700 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-700 dark:text-zinc-300 transition-colors">
+          <span data-i18n="cv_modal_close">بستن</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Sheet Container simulating A4 -->
+    <div class="w-full max-w-4xl bg-white dark:bg-[#0b0c10] border-x border-b border-zinc-200 dark:border-zinc-800 rounded-b-xl p-6 sm:p-10 shadow-2xl">
+      <div id="modalResumeMount"></div>
+    </div>
   </div>
 
   <!-- Bilingual Engine (Persian Default + English Toggle) -->
@@ -1138,11 +1385,11 @@
         sec_exp_title: "سوابق کاری و پروژه‌های عملی",
         job_venorad_title: "طراحی، توسعه و اتومیشن فروشگاه اینترنتی ونوراد",
         job_venorad_date: "مرداد ۱۴۰۵ - اکنون (در حال توسعه)",
-        job_venorad_desc: "راه‌اندازی صفر تا صد فروشگاه اینترنتی عطر با بیش از ۲۵۰۰ محصول. به جای تکیه بر خرید افزونه‌های تجاری آماده و هزینه‌بر، ترجیح دادم افزونه‌های مورد نیاز را به‌صورت اختصاصی و سبک کدنویسی کنم که علاوه بر صرفه‌جویی مالی در هزینه‌های پروژه و حذف وابستگی به افزونه‌های سنگین، سرعت بارگذاری و تطبیق ۱۰۰٪ با قالب فروشگاه حاصل شد؛ از جمله: افزونه هرم و آکوردهای بویایی عطرها (با سیستم کش ترنزینت)، افزونه فیلتر ایجکس لحظه‌ای محصولات، و افزونه وضعیت سفارشی انبار. همچنین طراحی پایپ‌لاین پایتون برای استخراج خودکار و استانداردسازی اطلاعات محصولات و بارگذاری دسته‌ای در سایت با تصاویر WebP.",
+        job_venorad_desc: "راه‌اندازی صفر تا صد فروشگاه اینترنتی عطر با بیش از ۲۵۰۰ محصول. توسعه اختصاصی و سبک افزونه‌های مورد نیاز ووکامرس (هرم بویایی با کش ترنزینت، فیلتر ایجکس محصولات و وضعیت انبار سفارشی) برای حذف وابستگی به افزونه‌های سنگین تجاری، و طراحی پایپ‌لاین پایتون جهت استخراج، پاکسازی و بارگذاری خودکار و دسته‌ای محصولات.",
         job_bots_title: "طراحی ربات‌های تلگرام و اتومیشن اسکرپینگ",
         job_bots_date: "دی ۱۴۰۳ تا بهمن ۱۴۰۳ (۱ ماه)",
         job_bots_company: "فریلنس • ایران، گنبد کاووس",
-        job_bots_desc: "پیاده‌سازی ربات‌های اتومیشن و پایشگر با پایتون؛ از جمله اسکرپر لحظه‌ای برای پایش و استخراج آگهی‌های حواله خودرو در سایت‌های دیوار و شیپور با هشدار آنی در تلگرام، و ساخت سیستم مدیریت دانلود شخصی WebIDM به همراه بات تلگرام (پروژه اخیراً توسعه‌یافته برای مدیریت ناهمگام و استریم دانلودها).",
+        job_bots_desc: "پیاده‌سازی ربات‌های اتومیشن و پایشگر با پایتون؛ از جمله اسکرپر لحظه‌ای برای پایش و استخراج آگهی‌های حواله خودرو در دیوار و شیپور با هشدار آنی در تلگرام، و ساخت سیستم مدیریت دانلود شخصی چندنخی ناهمگام WebIDM در پایتون با کنترل از طریق بات تلگرام.",
         job_alpha_title: "بازطراحی و بهینه‌سازی وبسایت پراپ فرم",
         job_alpha_date: "مرداد ۱۴۰۲ تا آذر ۱۴۰۲ (۴ ماه)",
         job_alpha_desc: "اصلاح ساختار وبسایت، رفع ایرادات عملکردی و باگ‌های فنی، و بهینه‌سازی سرعت و تجربه کاربری برای شرکت پراپ تریدینگ آلفا فاند تریدر.",
@@ -1160,16 +1407,7 @@
         pccc_stat_badge: "۱۴۲+ ساعت صوت • ۴۲۳,۰۰۰+ کلمه • ۲۷,۰۰۰+ نوبت مکالمه",
         pccc_title: "PCCC: پیکره صوتی-متنی مکالمات طبیعی پزشک و بیمار به زبان فارسی",
         pccc_subtitle: "اولین مجموعه داده طبیعی مکالمات بالینی در ایران و خط لوله جامع هوش مصنوعی گفتار و متن",
-        pccc_desc: "پروژه کارشناسی و دیتاست پژوهشی ثبت‌شده در ۲۹ جلسه کاری مداوم در مطب‌های بالینی. هدف این پروژه برطرف‌کردن کمبود منابع داده‌ای طبیعی بدون سناریو برای توسعه مدل‌های هوش مصنوعی پزشکی و سیستم‌های خودکار اسناد بالینی (Ambient Clinical AI) بوده است. در این طرح، علاوه بر پیاده‌سازی سرویس اختصاصی اندروید برای ضبط پیوسته بدون فشرده‌سازی (PCM تک‌کاناله ۱۶ بیت ۱۶kHz) با تلمتری و مانیتورینگ آنلاین وضعیت سلامت از طریق بات بله، یک خط لوله تمام‌عیار هوش مصنوعی برای پردازش، تفکیک و پالایش داده‌ها طراحی و پیاده‌سازی شد.",
-        pccc_pipeline_title: "پایپ‌لاین هوش مصنوعی و مدل‌های پردازش صوت و زبان طبیعی (AI Architecture):",
-        pccc_pipe_asr_title: "۱. تبدیل گفتار به متن (ASR with Whisper Large-v3)",
-        pccc_pipe_asr_desc: "استفاده از ترنسفورمر OpenAI Whisper Large-v3 همراه با پرامپت‌گذاری اختصاصی واژگان پزشکی جهت رونویسی دقیق متون بالینی و اصطلاحات تخصصی دارویی.",
-        pccc_pipe_diar_title: "۲. دیارایزیشن عصبی (pyannote.audio)",
-        pccc_pipe_diar_desc: "تفکیک خودکار نقش گویندگان (پزشک، بیمار، همراه و کودک)، استخراج امبدینگ‌های عصبی صدا و کشف بخش‌های همپوشانی گفتار (Overlapping Speech).",
-        pccc_pipe_llm_title: "۳. پالایش هوشمند بالینی با LLM (Gemini 3.5 Flash)",
-        pccc_pipe_llm_desc: "اصلاح علائم نگارشی و نویزهای ترنسکریپشن با پرامپتینگ سخت‌گیرانه ضدتوهم (Zero-Hallucination) جهت حفظ قطعی و بدون تغییر تمام حقایق بالینی.",
-        pccc_pipe_bench_title: "۴. ارزیابی بلادرنگ و بنچمارک سخت‌افزاری",
-        pccc_pipe_bench_desc: "اجرا و بنچمارک خط لوله بر روی پردازنده گرافیکی RTX 3060 با نرخ پردازش ۸ برابر سریع‌تر از زمان واقعی (RTF ≈ ۰.۱۲۵ به همراه چک‌پوینت‌های ۵ دقیقه‌ای ضدخطا).",
+        pccc_desc: "پروژه کارشناسی و دیتاست پژوهشی ثبت‌شده در ۲۹ جلسه کاری مداوم در مطب‌های بالینی جهت آموزش مدل‌های هوش مصنوعی پزشکی و اسناد بالینی (Ambient Clinical AI). در این پروژه سرویس اختصاصی اندروید برای ضبط پیوسته با مانیتورینگ آنلاین بات بله توسعه یافت و خط لوله پردازش صوت و متن شامل رونویسی گفتار با Whisper Large-v3، تفکیک عصبی گویندگان با pyannote.audio و پالایش بالینی متون با Gemini 3.5 Flash پیاده‌سازی و روی RTX 3060 با سرعت ۸ برابر زمان واقعی ارزیابی شد.",
         pccc_repos_label: "مخازن و لینک‌های دسترسی به پروژه PCCC:",
         pccc_link_main: "ریپوزیتوری کلی و مستندات",
         pccc_link_dataset: "بخش داده‌ها و فایل‌های دیتاست",
@@ -1177,7 +1415,18 @@
         pccc_link_poster: "پوستر رسمی کنفرانس (ISC)",
         sec_edu_title: "سوابق تحصیلی",
         edu_title: "کارشناسی مهندسی کامپیوتر (نرم‌افزار)",
-        edu_place: "دانشگاه گلستان • ورودی ۱۴۰۱ (در حال تحصیل - ترم ۹)"
+        edu_place: "دانشگاه گلستان • ورودی ۱۴۰۱ (در حال تحصیل - ترم ۹)",
+
+        cv_preview_btn: "پیش‌نمایش PDF",
+        cv_modal_title: "پیش‌نمایش نسخه مستقل رزومه PDF (مخصوص استخدام)",
+        cv_modal_print: "چاپ یا ذخیره به صورت PDF",
+        cv_modal_close: "بستن",
+        cv_summary_title: "خلاصه حرفه‌ای و پروفایل مهندسی",
+        cv_skills_title: "مهارت‌های فنی و شایستگی‌های تخصصی",
+        cv_cat_backend: "زبان اصلی و معماری بک‌اند",
+        cv_cat_infra: "زیرساخت سرور و لینوکس (Homelab)",
+        cv_cat_ai: "هوش مصنوعی، پردازش گفتار و LLM",
+        cv_cat_tools: "توسعه چندمنظوره، وب و زبان‌ها"
       },
       en: {
         status_pill: "Available for Hire & Engineering Roles",
@@ -1258,11 +1507,11 @@
         sec_exp_title: "Work Experience & Commercial Projects",
         job_venorad_title: "Full-Stack Development & Ingestion Automation — Venorad.ir",
         job_venorad_date: "Aug 2026 - Present (Active Development)",
-        job_venorad_desc: "Architected the e-commerce platform hosting 2500+ luxury perfume products. Instead of relying on expensive third-party commercial plugins, I authored custom lightweight WooCommerce plugins (olfactory note pyramids with transient caching, live AJAX product filtering, and custom order statuses), saving recurring project costs and ensuring 100% theme compatibility. Built automated Python ETL pipelines to scrape, normalize, and bulk-import product catalogs with optimized WebP media.",
+        job_venorad_desc: "Architected the e-commerce platform hosting 2500+ perfume products. Developed custom lightweight WooCommerce PHP plugins (olfactory notes with transient caching, live AJAX filters, and custom stock statuses) to eliminate heavy third-party plugins, and built automated Python ETL pipelines to scrape, clean, and bulk-import product catalogs with WebP media.",
         job_bots_title: "Telegram Bots & Scraping Automation",
         job_bots_date: "Jan 2025 - Feb 2025 (1 month)",
         job_bots_company: "Freelance • Gonbad Kavous, Iran",
-        job_bots_desc: "Built asynchronous Python monitoring tools, including a real-time car transfer listing scraper for Divar and Sheypoor with instant Telegram alerts, and a remote controller bot for WebIDM (a recent asynchronous multi-threaded download manager).",
+        job_bots_desc: "Built asynchronous Python automation tools, including a real-time car transfer listing scraper for Divar and Sheypoor with instant Telegram alerts, and architected WebIDM, a multi-threaded asynchronous personal download manager with remote Telegram bot control.",
         job_alpha_title: "Web Platform Refactor & Performance Optimization",
         job_alpha_date: "Jul 2023 - Nov 2023 (4 months)",
         job_alpha_desc: "Refactored website architecture, fixed operational bugs, and optimized loading speed and user experience for proprietary trading firm Alpha Funded Trader.",
@@ -1280,16 +1529,7 @@
         pccc_stat_badge: "142+ Audio Hours • 423K+ Words • 27K+ Dialogue Turns",
         pccc_title: "PCCC: Persian Clinical Conversation Corpus",
         pccc_subtitle: "First In-the-Wild Persian Clinical Speech-Text Corpus & End-to-End AI Pipeline",
-        pccc_desc: "B.Sc. project and medical speech dataset capturing 29 continuous clinical sessions across outpatient practices. Designed to address the acute lack of naturalistic, unscripted Persian clinical speech data for training ambient clinical intelligence (Ambient Clinical AI) and automated documentation systems. In addition to engineering a custom background Android recording service for uncompressed audio acquisition (16-bit 16kHz mono PCM) with live heartbeat telemetry via Bale messenger bot, a complete end-to-end AI pipeline was architected and deployed for speech recognition, speaker diarization, and clinical refinement.",
-        pccc_pipeline_title: "AI & Speech Processing Pipeline Architecture:",
-        pccc_pipe_asr_title: "1. Speech Recognition (ASR with Whisper Large-v3)",
-        pccc_pipe_asr_desc: "OpenAI Whisper Large-v3 transformer with domain-specific clinical prompt injection for Persian medical terminology and pharmacology.",
-        pccc_pipe_diar_title: "2. Neural Speaker Diarization (pyannote.audio)",
-        pccc_pipe_diar_desc: "Neural speaker embeddings, multi-speaker clustering (doctor, patient, companion, child) and overlapping speech detection.",
-        pccc_pipe_llm_title: "3. LLM Clinical Refinement (Gemini 3.5 Flash)",
-        pccc_pipe_llm_desc: "Transcription artifact correction and punctuation using strict zero-hallucination prompting, preserving clinical veracity without alterations.",
-        pccc_pipe_bench_title: "4. Hardware Benchmarking & Throughput",
-        pccc_pipe_bench_desc: "Evaluated on an NVIDIA RTX 3060 12GB running 8x faster than real-time (RTF ≈ 0.125 with 5-minute fault-tolerant checkpoints).",
+        pccc_desc: "B.Sc. project and medical speech dataset capturing 29 continuous clinical sessions across outpatient practices for Ambient Clinical AI. Developed a custom background Android recording service with heartbeat telemetry via Bale bot, and deployed an end-to-end AI pipeline featuring Whisper Large-v3 for ASR, pyannote.audio for speaker diarization, and Gemini 3.5 Flash for zero-hallucination clinical refinement, benchmarked on an RTX 3060 at 8x real-time speed.",
         pccc_repos_label: "PCCC Project Repositories & Access Links:",
         pccc_link_main: "Master Repository & Documentation",
         pccc_link_dataset: "Dataset Files & Samples",
@@ -1297,7 +1537,18 @@
         pccc_link_poster: "Official Conference Poster (ISC)",
         sec_edu_title: "Education",
         edu_title: "B.Sc. in Computer Engineering (Software)",
-        edu_place: "Golestan University • Entrance 2022 (Currently in 9th Semester)"
+        edu_place: "Golestan University • Entrance 2022 (Currently in 9th Semester)",
+
+        cv_preview_btn: "PDF Preview",
+        cv_modal_title: "Executive Standalone Resume Preview (Ready for Print & PDF)",
+        cv_modal_print: "Print / Save as PDF",
+        cv_modal_close: "Close",
+        cv_summary_title: "Professional Summary & Engineering Profile",
+        cv_skills_title: "Core Technical Competencies & Systems",
+        cv_cat_backend: "Primary Languages & Backend Architecture",
+        cv_cat_infra: "Homelab Infrastructure & Enterprise Linux",
+        cv_cat_ai: "Speech AI, Deep Learning & LLMs",
+        cv_cat_tools: "Multi-Platform, Systems & Languages"
       }
     };
 
@@ -1363,21 +1614,21 @@
       setLanguage(savedLang);
     });
 
-    // Handle seamless PDF printing with matching theme and expanded skills
-    window.addEventListener('beforeprint', () => {
-      document.querySelectorAll('details').forEach(d => {
-        d.setAttribute('data-was-open', d.open ? 'true' : 'false');
-        d.open = true;
-      });
-    });
+    // Standalone Resume Preview Modal Logic
+    function openResumePreview() {
+      const mount = document.getElementById('modalResumeMount');
+      mount.innerHTML = document.getElementById('resumePrintView').innerHTML;
+      document.getElementById('resumePreviewModal').classList.remove('hidden');
+      document.body.classList.add('overflow-hidden');
+    }
 
-    window.addEventListener('afterprint', () => {
-      document.querySelectorAll('details').forEach(d => {
-        if (d.getAttribute('data-was-open') !== 'true') {
-          d.open = false;
-        }
-        d.removeAttribute('data-was-open');
-      });
+    function closeResumePreview() {
+      document.getElementById('resumePreviewModal').classList.add('hidden');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeResumePreview();
     });
   </script>
 
