@@ -968,14 +968,21 @@
           </a>
           <span class="text-zinc-400 dark:text-zinc-600">•</span>
 
-          <!-- 2. Dataset Section -->
+          <!-- 2. Hugging Face Dataset -->
+          <a href="https://huggingface.co/datasets/shahabhb/PCCC_Persian_Clinical_Conversations_Corpus" target="_blank" rel="noopener noreferrer" class="font-medium text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1">
+            <span data-i18n="pccc_link_hf">دیتاست در Hugging Face</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          </a>
+          <span class="text-zinc-400 dark:text-zinc-600">•</span>
+
+          <!-- 3. Dataset Section -->
           <a href="https://github.com/Bekend/medical-dataset/tree/main/dataset" target="_blank" rel="noopener noreferrer" class="font-medium text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1">
             <span data-i18n="pccc_link_dataset">بخش داده‌ها و فایل‌های دیتاست</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
           </a>
           <span class="text-zinc-400 dark:text-zinc-600">•</span>
 
-          <!-- 3. Pipeline Software Code -->
+          <!-- 4. Pipeline Software Code -->
           <a href="https://github.com/Bekend/medical-dataset/tree/main/whisper_pyannote" target="_blank" rel="noopener noreferrer" class="font-medium text-sky-600 dark:text-sky-400 hover:underline inline-flex items-center gap-1">
             <span data-i18n="pccc_link_pipeline">سورس نرم‌افزار و خط لوله پردازشی</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
@@ -1189,9 +1196,10 @@
         </div>
 
         <div class="pt-1 border-t cv-border flex flex-wrap items-center justify-between text-[8px] font-sans">
-          <span class="cv-muted" data-i18n="cv_pccc_links_label">لینک‌های دسترسی در گیت‌هاب:</span>
+          <span class="cv-muted" data-i18n="cv_pccc_links_label">لینک‌های دسترسی:</span>
           <div class="flex items-center gap-1.5 font-mono">
             <a href="https://github.com/Bekend/medical-dataset" class="cv-accent hover:underline font-sans" data-i18n="cv_pccc_link_repo">مخزن اصلی</a> •
+            <a href="https://huggingface.co/datasets/shahabhb/PCCC_Persian_Clinical_Conversations_Corpus" class="cv-accent hover:underline font-sans" data-i18n="cv_pccc_link_hf">هاگینگ‌فیس</a> •
             <a href="https://github.com/Bekend/medical-dataset/tree/main/dataset" class="cv-accent hover:underline font-sans" data-i18n="cv_pccc_link_dataset">دیتاست</a> •
             <a href="https://github.com/Bekend/medical-dataset/tree/main/whisper_pyannote" class="cv-accent hover:underline font-sans" data-i18n="cv_pccc_link_pipeline">پایپ‌لاین</a> •
             <a href="https://shahabhb.ir/biointelligence-certificate.jpg" class="cv-accent hover:underline font-bold font-sans" data-i18n="cv_pccc_link_cert">گواهی پذیرش (ISC)</a> •
@@ -1477,12 +1485,14 @@
         "pccc_desc": "پروژه پژوهشی و دیتاست بالینی ثبت‌شده در ۲۹ جلسه کاری مداوم (بیش از ۱۴۲ ساعت صوت طبیعی، ۴۲۳,۰۰۰ کلمه و ۲۷,۰۰۰ نوبت مکالمه) در مطب‌های بالینی جهت آموزش مدل‌های هوش مصنوعی اسناد پزشکی (<span dir=\"ltr\">Ambient Clinical AI</span>):<ul class=\"list-disc rtl:pr-3 ltr:pl-3 space-y-0.2\"><li>طراحی و ساخت نرم‌افزار اختصاصی اندروید (<span dir=\"ltr\">Java SDK</span>) برای ضبط پیوسته و هوشمند صدای محیط با تله‌متری آنلاین وضعیت از طریق بازوی بله.</li><li>پیاده‌سازی خط لوله اند-تو-اند پردازش گفتار شامل رونویسی با <span dir=\"ltr\">Whisper Large-v3</span>، تفکیک عصبی گویندگان با <span dir=\"ltr\">pyannote.audio</span> و پالایش بالینی متون با <span dir=\"ltr\">Gemini 3.5 Flash</span>.</li><li>پذیرش و ارائه مقاله به صورت ارائه شفاهی (<span dir=\"ltr\">Oral Presentation</span>) در کنفرانس هوش مصنوعی و زیست هوشمند (<span dir=\"ltr\">BioIntelligence 2026</span>) دانشگاه شهید بهشتی و نمایه در <span dir=\"ltr\">ISC</span>.</li></ul>",
         "pccc_conf_date": "دانشگاه شهید بهشتی • آبان ۱۴۰۵",
         "pccc_link_main": "ریپوزیتوری کلی و مستندات",
+        "pccc_link_hf": "دیتاست در Hugging Face",
         "pccc_link_dataset": "بخش داده‌ها و فایل‌های دیتاست",
         "pccc_link_pipeline": "سورس نرم‌افزار و خط لوله پردازشی",
         "pccc_link_cert": "گواهی رسمی پذیرش کنفرانس (ISC)",
         "pccc_link_poster": "پوستر کنفرانس",
-        "cv_pccc_links_label": "لینک‌های دسترسی در گیت‌هاب:",
+        "cv_pccc_links_label": "لینک‌های دسترسی:",
         "cv_pccc_link_repo": "مخزن اصلی",
+        "cv_pccc_link_hf": "هاگینگ‌فیس",
         "cv_pccc_link_dataset": "دیتاست",
         "cv_pccc_link_pipeline": "پایپ‌لاین",
         "cv_pccc_link_cert": "گواهی پذیرش (ISC)",
@@ -1646,12 +1656,14 @@
         "pccc_desc": "Academic research project and clinical corpus recorded across 29 continuous clinical sessions (>142 hours of natural audio, 423,000 words, 27,000 dialogue turns) in outpatient clinics for training Ambient Clinical AI models:<ul class=\"list-disc rtl:pr-3 ltr:pl-3 space-y-0.2\"><li>Engineered a custom Android background recording application (Java SDK) with real-time health-check telemetry via Bale messenger bot.</li><li>Built an end-to-end speech processing pipeline: ASR transcription using Whisper Large-v3, speaker diarization using pyannote.audio, and clinical text cleaning with Gemini 3.5 Flash.</li><li>Accepted for Oral Presentation at the Smart Biology and AI Conference (BioIntelligence 2026), Shahid Beheshti University, and indexed in ISC.</li></ul>",
         "pccc_conf_date": "Shahid Beheshti University • Nov 2026",
         "pccc_link_main": "Main Repository & Documentation",
+        "pccc_link_hf": "Hugging Face Dataset",
         "pccc_link_dataset": "Dataset Files & Corpora",
         "pccc_link_pipeline": "Processing Pipeline & Software Source",
         "pccc_link_cert": "Official Conference Acceptance Certificate (ISC)",
         "pccc_link_poster": "Conference Poster",
-        "cv_pccc_links_label": "GitHub Access Links:",
+        "cv_pccc_links_label": "Access Links:",
         "cv_pccc_link_repo": "Main Repo",
+        "cv_pccc_link_hf": "Hugging Face",
         "cv_pccc_link_dataset": "Dataset",
         "cv_pccc_link_pipeline": "Pipeline",
         "cv_pccc_link_cert": "Acceptance Certificate (ISC)",
